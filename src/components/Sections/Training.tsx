@@ -1,17 +1,17 @@
-import { Box, Button, Card, CardContent, Container, Divider, Grid2, IconButton, IconButtonProps, Stack, styled, Tooltip, useTheme, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material'
-import { StyledTypography as Typography } from '../Styled/StyledComponents'
+import { CheckCircle } from '@mui/icons-material';
+import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
-import { applyOpacity } from '../../utils/utils';
-import ImgWithLoading from '../common/ImgWithLoading';
-import { useEffect, useRef, useState } from 'react';
+import { Box, Button, Card, CardContent, Container, Divider, Grid2, IconButton, IconButtonProps, Paper, Stack, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
-import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
-import { CheckCircle } from '@mui/icons-material';
-import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
-import CustomModal from '../common/Modal';
-import BoxSection from '../common/BoxSection';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { applyOpacity } from '../../utils/utils';
+import BoxSection from '../common/BoxSection';
+import ImgWithLoading from '../common/ImgWithLoading';
+import CustomModal from '../common/Modal';
+import { StyledTypography as Typography } from '../Styled/StyledComponents';
 
 interface Certificate {
     name: string;
@@ -27,7 +27,16 @@ interface CurriculumItem {
     ch: number;
 }
 
-const curriculumData: CurriculumItem[] = [
+interface Graduation {
+    name: string;
+    institution: string;
+    period: string;
+    type: string;
+    completionDate: { year: number; month: number };
+    curriculum: CurriculumItem[];
+}
+
+const curriculumADS: CurriculumItem[] = [
     { ordem: 1, unidadeCurricular: 'Introdução a Computação', ch: 60 },
     { ordem: 2, unidadeCurricular: 'Lógica de Programação', ch: 70 },
     { ordem: 3, unidadeCurricular: 'Matemática Computacional', ch: 60 },
@@ -55,18 +64,52 @@ const curriculumData: CurriculumItem[] = [
     { ordem: 25, unidadeCurricular: 'Linguagem de Programação para Mobile', ch: 60 }
 ];
 
+const curriculumCienciaDados: CurriculumItem[] = [
+    { ordem: 1, unidadeCurricular: 'Modelagem de Dados', ch: 30 },
+    { ordem: 2, unidadeCurricular: 'Inteligência Artificial', ch: 30 },
+    { ordem: 3, unidadeCurricular: 'Bancos de Dados NoSQL', ch: 30 },
+    { ordem: 4, unidadeCurricular: 'Linguagem de Programação em Python', ch: 30 },
+    { ordem: 5, unidadeCurricular: 'Matemática Computacional', ch: 30 },
+    { ordem: 6, unidadeCurricular: 'Estatística Descritiva', ch: 30 },
+    { ordem: 7, unidadeCurricular: 'Engenharia de Dados', ch: 30 },
+    { ordem: 8, unidadeCurricular: 'Data Visualization', ch: 30 },
+    { ordem: 9, unidadeCurricular: 'Aprendizagem de Máquina Supervisionada', ch: 30 },
+    { ordem: 10, unidadeCurricular: 'Aprendizagem de Máquina Não Supervisionada', ch: 30 },
+    { ordem: 11, unidadeCurricular: 'Visão Computacional', ch: 30 },
+    { ordem: 12, unidadeCurricular: 'Mineração de Textos', ch: 30 }
+];
+
 const Training = ({ className }: { className?: string }) => {
     const theme = useTheme();
     const { t } = useTranslation();
     const [activeImg, setActiveImg] = useState(1);
     const [prevAnimation, setPrevAnimation] = useState<'left' | 'right' | null>(null);
     const [autoClick, setAutoClick] = useState(true);
-    const refAction = useRef<NodeJS.Timeout | null>(null)
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [openModalGraduation, setOpenModalGraduation] = useState(false);
+    const [selectedGraduation, setSelectedGraduation] = useState<Graduation | null>(null);
     const [modalImgOpen, setModalImgOpen] = useState(false);
     const [modalImg, setModalImg] = useState('')
+
+    const refAction = useRef<NodeJS.Timeout | null>(null)
+
+    const graduations: Graduation[] = [
+        {
+            name: 'Análise e Desenvolvimento de Sistemas',
+            institution: 'Senac Df',
+            period: '02/2024 - 12/2025',
+            type: 'Graduação',
+            completionDate: { year: 2025, month: 12 },
+            curriculum: curriculumADS,
+        },
+        {
+            name: 'Data Science e Inteligência Artificial',
+            institution: 'Senac Df',
+            period: '02/2026 - 12/2026',
+            type: 'Pós graduação',
+            completionDate: { year: 2026, month: 12 },
+            curriculum: curriculumCienciaDados
+        }
+    ];
 
     const certificates: Certificate[] = [
         {
@@ -120,6 +163,16 @@ const Training = ({ className }: { className?: string }) => {
         },
     ]
 
+    const handleOpen = (graduation: Graduation) => {
+        setSelectedGraduation(graduation);
+        setOpenModalGraduation(true);
+    };
+
+    const handleClose = () => {
+        setOpenModalGraduation(false);
+        setSelectedGraduation(null);
+    }
+
     useEffect(() => {
         if (autoClick) {
             refAction.current = setInterval(() => {
@@ -148,7 +201,7 @@ const Training = ({ className }: { className?: string }) => {
 
     const compareTodayDate = (year: number, month: number) => {
         const currentDate = new Date();
-        const comparisonDate = new Date(year, month - 1); // Mês é 0-indexado
+        const comparisonDate = new Date(year, month - 1);
         return currentDate < comparisonDate;
     }
 
@@ -192,26 +245,32 @@ const Training = ({ className }: { className?: string }) => {
             <Typography indicate variant="h1" sx={{ mb: 2 }}>{t('sections.training.title')}</Typography>
             <Container>
                 <Typography variant="h2">{t('sections.training.college.title')}</Typography>
-                <Card sx={{ width: 'fit-content', my: 2 }}>
-                    <CardContent>
-                        <Stack direction="row" gap={1}>
-                            <Tooltip title={compareTodayDate(2025, 12) ? 'Em andamento' : 'Concluído'} arrow placement='top'>
-                                <Box>
-                                    {compareTodayDate(2025, 12) ? <InfoRoundedIcon sx={{ color: 'info.main', fontSize: '1' }} /> : <CheckCircle sx={{ color: 'success.main', fontSize: '1' }} />}
-                                </Box>
-                            </Tooltip>
-                            <Typography variant="h3">Análise e Desenvolvimento de Sistemas</Typography>
-                        </Stack>
-                        <Typography variant="body1" sx={{ mb: 2, width: '100%', display: 'block' }}>Senac Df  (02/2024 - 12/2025)</Typography>
-                        <Button
-                            sx={{ width: '100%', display: 'flex', gap: 1 }}
-                            variant="contained"
-                            onClick={handleOpen}
-                        >
-                            {t('sections.training.viewSubjects')} <ArrowOutwardRoundedIcon />
-                        </Button>
-                    </CardContent>
-                </Card>
+                <Stack direction="row" gap={2} flexWrap="wrap" sx={{ my: 2 }}>
+                    {graduations.map((grad, index) => (
+                        <Card key={index} sx={{ flex: '1 1 400px' }}>
+                            <CardContent>
+                                <Stack direction="row" gap={1}>
+                                    <Tooltip title={compareTodayDate(grad.completionDate.year, grad.completionDate.month) ? t('sections.training.inProgress') : t('sections.training.completed')} arrow placement='top'>
+                                        <Box>
+                                            {compareTodayDate(grad.completionDate.year, grad.completionDate.month) ? <InfoRoundedIcon sx={{ color: 'info.main', fontSize: '1' }} /> : <CheckCircle sx={{ color: 'success.main', fontSize: '1' }} />}
+                                        </Box>
+                                    </Tooltip>
+                                    <Typography variant="h3">{grad.name}</Typography>
+                                </Stack>
+                                <Typography variant="body1" sx={{ mb: 2, width: '100%', display: 'block' }}>
+                                    {grad.institution} ({grad.period}) - {grad.type}
+                                </Typography>
+                                <Button
+                                    sx={{ width: '100%', display: 'flex', gap: 1 }}
+                                    variant="contained"
+                                    onClick={() => handleOpen(grad)}
+                                >
+                                    {t('sections.training.viewSubjects')} <ArrowOutwardRoundedIcon />
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Stack>
 
                 <Typography variant="h2" sx={{ mb: 2 }}>{t('sections.training.coursesAndCertificates')}</Typography>
                 <Grid2 container sx={{ minHeight: '50vh' }} spacing={2}>
@@ -340,11 +399,11 @@ const Training = ({ className }: { className?: string }) => {
                 </Grid2>
             </Container>
             <CustomModal
-                open={open}
+                open={openModalGraduation}
                 onClose={handleClose}
                 maxWidth='800px'
                 maxHeight='700px'
-                title={t('sections.training.college.modalTitle')}
+                title={selectedGraduation?.name || t('sections.training.college.modalTitle')}
             >
                 <TableContainer component={Paper}>
                     <Table>
@@ -356,7 +415,7 @@ const Training = ({ className }: { className?: string }) => {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {curriculumData.map((item) => (
+                            {selectedGraduation?.curriculum.map((item) => (
                                 <TableRow key={item.ordem} hover>
                                     <TableCell>{item.ordem}</TableCell>
                                     <TableCell>{item.unidadeCurricular}</TableCell>
