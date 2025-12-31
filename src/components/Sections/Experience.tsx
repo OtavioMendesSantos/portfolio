@@ -1,64 +1,67 @@
-import { Box, useTheme } from '@mui/material'
+import { Box, Stack, useTheme } from '@mui/material'
 import { StyledTypography as Typography } from '../Styled/StyledComponents'
 import BoxSection from '../common/BoxSection'
 import { useTranslation } from 'react-i18next'
+
+interface Task {
+    title: string;
+    description: string;
+}
+
+interface ExperienceItem {
+    id: string;
+    position: string;
+    company: string;
+    tasks: Record<string, Task>;
+}
 
 const Experience = ({ className }: { className?: string }) => {
     const theme = useTheme()
     const { t } = useTranslation()
 
-    const tasks = [
-        {
-            title: t('sections.experience.tasks.systemRefactoring.title'),
-            description: t('sections.experience.tasks.systemRefactoring.description')
-        },
-        {
-            title: t('sections.experience.tasks.challengeResolution.title'),
-            description: t('sections.experience.tasks.challengeResolution.description')
-        },
-        {
-            title: t('sections.experience.tasks.componentDevelopment.title'),
-            description: t('sections.experience.tasks.componentDevelopment.description')
-        },
-        {
-            title: t('sections.experience.tasks.typescript.title'),
-            description: t('sections.experience.tasks.typescript.description')
-        },
-        {
-            title: t('sections.experience.tasks.bugFixing.title'),
-            description: t('sections.experience.tasks.bugFixing.description')
-        },
-        {
-            title: t('sections.experience.tasks.libraryImplementation.title'),
-            description: t('sections.experience.tasks.libraryImplementation.description')
-        },
-        {
-            title: t('sections.experience.tasks.stateManagement.title'),
-            description: t('sections.experience.tasks.stateManagement.description')
-        }
-    ]
+    // We can fetch the raw object from translation to iterate over keys
+    const experiencesData = t('sections.experience.items', { returnObjects: true }) as Record<string, any>;
+
+    // Convert the object to an array to map over it easily
+    const experienceList: ExperienceItem[] = Object.keys(experiencesData).map(key => ({
+        id: key,
+        position: experiencesData[key].position,
+        company: experiencesData[key].company,
+        tasks: experiencesData[key].tasks
+    }));
+
 
     return (
         <BoxSection title={t('sections.experience.title')} className={className}>
             <Typography indicate variant="h1" sx={{ mb: 2 }}>{t('sections.experience.title')}</Typography>
-            <Box
-                sx={{
-                    borderLeft: `3px solid ${theme.palette.primary.main}`,
-                    p: '0 1rem',
-                }}
-            >
-                <Typography variant="h2">{t('sections.experience.position')}</Typography>
-                <Typography variant="caption" sx={{ mb: 2 }}>{t('sections.experience.company')}</Typography>
-                <Typography variant="h3">{t('sections.experience.responsibilities')}</Typography>
 
-                <ul style={{ margin: '0', gap: 2 }}>
-                    {tasks.map((task, index) => (
-                        <li key={index}>
-                            <Typography><strong style={{ color: theme.palette.primary.main }}>{task.title}:</strong> {task.description}</Typography>
-                        </li>
-                    ))}
-                </ul>
-            </Box>
+            <Stack spacing={4}>
+                {experienceList.map((exp) => (
+                    <Box
+                        key={exp.id}
+                        sx={{
+                            borderLeft: `3px solid ${theme.palette.primary.main}`,
+                            p: '0 1rem',
+                        }}
+                    >
+                        <Typography variant="h2">{exp.position}</Typography>
+                        <Typography variant="caption" sx={{ mb: 2, display: 'block' }}>{exp.company}</Typography>
+
+                        {exp.tasks && Object.keys(exp.tasks).length > 0 && (
+                            <>
+                                <Typography variant="h3">{t('sections.experience.responsibilities')}</Typography>
+                                <ul style={{ margin: '0', gap: 2 }}>
+                                    {Object.values(exp.tasks).map((task: any, index: number) => (
+                                        <li key={index}>
+                                            <Typography><strong style={{ color: theme.palette.primary.main }}>{task.title}:</strong> {task.description}</Typography>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        )}
+                    </Box>
+                ))}
+            </Stack>
         </BoxSection>
     )
 }

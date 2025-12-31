@@ -50,37 +50,86 @@
     },
     "experience": {
       "title": "Experience",
-      "position": "Front-end Developer",
-      "company": "PickNGo | April 2024 - June 2025",
       "responsibilities": "Responsibilities and duties",
-      "tasks": {
-        "systemRefactoring": {
-          "title": "System Refactoring",
-          "description": "Participated in refactoring the company's main system alongside the front-end team, making it more performant, modern, and intuitive, with new features and better user experience."
+      "items": {
+        "areopagus": {
+          "position": "Full Stack Developer",
+          "company": "Areopagus Io | Dec 2025 - Present",
+          "tasks": {}
         },
-        "challengeResolution": {
-          "title": "Challenge Resolution",
-          "description": "Solved technical challenges with creative and efficient approaches, contributing innovative solutions adopted as best practices by the team."
+        "freelance": {
+          "position": "Full Stack Developer",
+          "company": "Freelance | Jun 2025 - Dec 2025",
+          "tasks": {
+            "uiux": {
+              "title": "UI/UX Development",
+              "description": "Development of responsive UI/UX for web and mobile using React, TypeScript, JavaScript, HTML, CSS/SASS, Tailwind, and WordPress."
+            },
+            "backend": {
+              "title": "Back-end Development",
+              "description": "End-to-end development with Node.js and Express, creation and refactoring of APIs, integration with PostgreSQL, and real-time communication via WebSocket."
+            },
+            "refactoring": {
+              "title": "Optimization and Quality",
+              "description": "Refactoring, optimization, and bug fixing, ensuring performance, stability, and maintainability of applications."
+            }
+          }
         },
-        "componentDevelopment": {
-          "title": "Component Development",
-          "description": "Developed and maintained components such as dynamic forms, interactive maps, support for multiple brands (whitelabel), and global notification system (snackbar), focusing on modularity and usability."
+        "pickngoMobile": {
+          "position": "Mobile App Developer",
+          "company": "PickNGo | May 2025 - Jun 2025",
+          "tasks": {
+            "refactoring": {
+              "title": "Mobile Refactoring",
+              "description": "Actively participated in the refactoring of the mobile app for delivery drivers, collaborating with the team to make it more performant, modern, and intuitive."
+            },
+            "bestPractices": {
+              "title": "Best Practices",
+              "description": "Contributed to the adoption of development best practices, focusing on modularity, scalability, and maintainability."
+            },
+            "interfaces": {
+              "title": "Interface Implementation",
+              "description": "Implemented complete interfaces and navigation flows based on detailed prototypes in Figma, strictly respecting design guidelines."
+            },
+            "i18n": {
+              "title": "Internationalization",
+              "description": "Implemented and maintained the application's internationalization, using modern tools for translation and multi-language support."
+            }
+          }
         },
-        "typescript": {
-          "title": "TypeScript Typing",
-          "description": "Created and maintained global types, interfaces, and DTOs in TypeScript, promoting consistency between application layers and reducing integration errors."
-        },
-        "bugFixing": {
-          "title": "Bug Resolution",
-          "description": "Worked on identifying and resolving bugs, collaborating with the back-end team to ensure system stability and improve communication between layers."
-        },
-        "libraryImplementation": {
-          "title": "Library Implementation",
-          "description": "Researched, tested, and implemented libraries that best fit the project's needs, focusing on performance, usability, and maintainability."
-        },
-        "stateManagement": {
-          "title": "State Management",
-          "description": "Implemented and maintained global state management, ensuring predictability, data consistency, and facilitating system scalability."
+        "pickngoFrontend": {
+          "position": "Front-end Developer",
+          "company": "PickNGo | April 2024 - June 2025",
+          "tasks": {
+            "systemRefactoring": {
+              "title": "System Refactoring",
+              "description": "Participated in refactoring the company's main system alongside the front-end team, making it more performant, modern, and intuitive, with new features and better user experience."
+            },
+            "challengeResolution": {
+              "title": "Challenge Resolution",
+              "description": "Solved technical challenges with creative and efficient approaches, contributing innovative solutions adopted as best practices by the team."
+            },
+            "componentDevelopment": {
+              "title": "Component Development",
+              "description": "Developed and maintained components such as dynamic forms, interactive maps, support for multiple brands (whitelabel), and global notification system (snackbar), focusing on modularity and usability."
+            },
+            "typescript": {
+              "title": "TypeScript Typing",
+              "description": "Created and maintained global types, interfaces, and DTOs in TypeScript, promoting consistency between application layers and reducing integration errors."
+            },
+            "bugFixing": {
+              "title": "Bug Resolution",
+              "description": "Worked on identifying and resolving bugs, collaborating with the back-end team to ensure system stability and improve communication between layers."
+            },
+            "libraryImplementation": {
+              "title": "Library Implementation",
+              "description": "Researched, tested, and implemented libraries that best fit the project's needs, focusing on performance, usability, and maintainability."
+            },
+            "stateManagement": {
+              "title": "State Management",
+              "description": "Implemented and maintained global state management, ensuring predictability, data consistency, and facilitating system scalability."
+            }
+          }
         }
       }
     },

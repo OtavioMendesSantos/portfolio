@@ -50,37 +50,86 @@
     },
     "experience": {
       "title": "Experiência",
-      "position": "Dev. Front End",
-      "company": "PickNGo | Abril de 2024 - Junho de 2025",
       "responsibilities": "Atribuições e responsabilidades",
-      "tasks": {
-        "systemRefactoring": {
-          "title": "Refatoração do Sistema",
-          "description": "Participei da refatoração do sistema principal da empresa ao lado da equipe de front-end, tornando-o mais performático, moderno e intuitivo, com novas funcionalidades e melhor experiência do usuário."
+      "items": {
+        "areopagus": {
+          "position": "Desenvolvedor Full Stack",
+          "company": "Areopagus Io | Dez 2025 - Atualmente",
+          "tasks": {}
         },
-        "challengeResolution": {
-          "title": "Resolução de Desafios",
-          "description": "Resolvi desafios técnicos com abordagens criativas e eficientes, contribuindo com soluções inovadoras adotadas como boas práticas pela equipe."
+        "freelance": {
+          "position": "Desenvolvedor Full Stack",
+          "company": "Freelance | Jun 2025 - Dez 2025",
+          "tasks": {
+            "uiux": {
+              "title": "Desenvolvimento UI/UX",
+              "description": "Desenvolvimento de UI/UX responsivas para web e mobile usando React, TypeScript, JavaScript, HTML, CSS/SASS, Tailwind e WordPress."
+            },
+            "backend": {
+              "title": "Desenvolvimento Back-end",
+              "description": "Desenvolvimento end-to-end com Node.js e Express, criação e refatoração de APIs, integração com PostgreSQL e comunicação em tempo real via WebSocket."
+            },
+            "refactoring": {
+              "title": "Otimização e Qualidade",
+              "description": "Refatoração, otimização e correção de bugs, garantindo performance, estabilidade e manutenibilidade das aplicações."
+            }
+          }
         },
-        "componentDevelopment": {
-          "title": "Desenvolvimento de Componentes",
-          "description": "Desenvolvi e mantive componentes como formulários dinâmicos, mapas interativos, suporte a múltiplas marcas (whitelabel) e sistema global de notificações (snackbar), com foco em modularidade e usabilidade."
+        "pickngoMobile": {
+          "position": "Desenvolvedor de Aplicativos Móveis",
+          "company": "PickNGo | Mai 2025 - Jun 2025",
+          "tasks": {
+            "refactoring": {
+              "title": "Refatoração Mobile",
+              "description": "Participei ativamente da refatoração do aplicativo mobile para entregadores, colaborando com a equipe para torná-lo mais performático, moderno e intuitivo."
+            },
+            "bestPractices": {
+              "title": "Boas Práticas",
+              "description": "Contribuí para a adoção de boas práticas de desenvolvimento, com foco em modularidade, escalabilidade e manutenibilidade."
+            },
+            "interfaces": {
+              "title": "Implementação de Interfaces",
+              "description": "Implementei interfaces e fluxos completos de navegação a partir de protótipos detalhados no Figma, respeitando os guidelines de design."
+            },
+            "i18n": {
+              "title": "Internacionalização",
+              "description": "Implementei e mantive a internacionalização do aplicativo, utilizando ferramentas modernas para tradução e suporte a múltiplos idiomas."
+            }
+          }
         },
-        "typescript": {
-          "title": "Tipagem TypeScript",
-          "description": "Criei e mantive types, interfaces e DTOs globais em TypeScript, promovendo consistência entre as camadas da aplicação e reduzindo erros de integração."
-        },
-        "bugFixing": {
-          "title": "Resolução de Bugs",
-          "description": "Atuei na identificação e resolução de bugs, trabalhando em conjunto com a equipe de back-end para garantir a estabilidade do sistema e melhorar a comunicação entre as camadas."
-        },
-        "libraryImplementation": {
-          "title": "Implementação de Bibliotecas",
-          "description": "Pesquisei, testei e implementei bibliotecas que melhor se encaixavam nas necessidades do projeto, focando em performance, usabilidade e manutenibilidade."
-        },
-        "stateManagement": {
-          "title": "Gerenciamento de Estado",
-          "description": "Implementei e mantive o gerenciamento de estado global, garantindo previsibilidade, consistência de dados e facilitando a escalabilidade do sistema."
+        "pickngoFrontend": {
+          "position": "Desenvolvedor Front End",
+          "company": "PickNGo | Abril 2024 - Junho 2025",
+          "tasks": {
+            "systemRefactoring": {
+              "title": "Refatoração do Sistema",
+              "description": "Participei da refatoração do sistema principal da empresa ao lado da equipe de front-end, tornando-o mais performático, moderno e intuitivo, com novas funcionalidades e melhor experiência do usuário."
+            },
+            "challengeResolution": {
+              "title": "Resolução de Desafios",
+              "description": "Resolvi desafios técnicos com abordagens criativas e eficientes, contribuindo com soluções inovadoras adotadas como boas práticas pela equipe."
+            },
+            "componentDevelopment": {
+              "title": "Desenvolvimento de Componentes",
+              "description": "Desenvolvi e mantive componentes como formulários dinâmicos, mapas interativos, suporte a múltiplas marcas (whitelabel) e sistema global de notificações (snackbar), com foco em modularidade e usabilidade."
+            },
+            "typescript": {
+              "title": "Tipagem TypeScript",
+              "description": "Criei e mantive types, interfaces e DTOs globais em TypeScript, promovendo consistência entre as camadas da aplicação e reduzindo erros de integração."
+            },
+            "bugFixing": {
+              "title": "Resolução de Bugs",
+              "description": "Atuei na identificação e resolução de bugs, trabalhando em conjunto com a equipe de back-end para garantir a estabilidade do sistema e melhorar a comunicação entre as camadas."
+            },
+            "libraryImplementation": {
+              "title": "Implementação de Bibliotecas",
+              "description": "Pesquisei, testei e implementei bibliotecas que melhor se encaixavam nas necessidades do projeto, focando em performance, usabilidade e manutenibilidade."
+            },
+            "stateManagement": {
+              "title": "Gerenciamento de Estado",
+              "description": "Implementei e mantive o gerenciamento de estado global, garantindo previsibilidade, consistência de dados e facilitando a escalabilidade do sistema."
+            }
+          }
         }
       }
     },
