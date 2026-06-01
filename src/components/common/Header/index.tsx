@@ -1,9 +1,10 @@
-import Logo from '/assets/svgs/logo_outlined.svg'
 import { AppBar, Box, Stack, useTheme, Tooltip } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { useThemeContext } from '../../../Context/ThemeContext'
 import { styled } from '@mui/material/styles'
 import { useTranslation } from 'react-i18next'
+
+const Logo = '/assets/svgs/logo_outlined.svg'
 
 const StyledSwitch = styled('div')(({ theme }) => ({
   '.switch': {
@@ -176,7 +177,6 @@ const Header = (
           <Box
             component="img"
             src={Logo}
-            alt="Logo Site - Desenvolvedor Otávio"
             onDragStart={(e: React.DragEvent<HTMLImageElement>) => e.preventDefault()}
             sx={{
               height: '100%',
