@@ -177,7 +177,7 @@ const Header = (
             component="img"
             src={Logo}
             alt="Logo Site - Desenvolvedor Otávio"
-            onDragStart={(e: DragEvent) => e.preventDefault()}
+            onDragStart={(e: React.DragEvent<HTMLImageElement>) => e.preventDefault()}
             sx={{
               height: '100%',
               width: 'fit-content',

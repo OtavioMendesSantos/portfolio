@@ -1,7 +1,7 @@
-import { Box, Stack, useTheme } from '@mui/material'
-import { StyledTypography as Typography } from '../Styled/StyledComponents'
-import BoxSection from '../common/BoxSection'
-import { useTranslation } from 'react-i18next'
+import { Box, Stack, useTheme } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { StyledTypography as Typography } from '../Styled/StyledComponents';
+import BoxSection from '../common/BoxSection';
 
 interface Task {
     title: string;
@@ -19,10 +19,8 @@ const Experience = ({ className }: { className?: string }) => {
     const theme = useTheme()
     const { t } = useTranslation()
 
-    // We can fetch the raw object from translation to iterate over keys
     const experiencesData = t('sections.experience.items', { returnObjects: true }) as Record<string, any>;
 
-    // Convert the object to an array to map over it easily
     const experienceList: ExperienceItem[] = Object.keys(experiencesData).map(key => ({
         id: key,
         position: experiencesData[key].position,

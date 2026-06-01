@@ -3,7 +3,7 @@ import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
-import { Box, Button, Card, CardContent, Container, Divider, Grid2, IconButton, IconButtonProps, Paper, Stack, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, useTheme } from '@mui/material';
+import { Box, Button, Card, CardContent, Container, Divider, Grid, IconButton, IconButtonProps, Paper, Stack, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -245,11 +245,11 @@ const Training = ({ className }: { className?: string }) => {
             <Typography indicate variant="h1" sx={{ mb: 2 }}>{t('sections.training.title')}</Typography>
             <Container>
                 <Typography variant="h2">{t('sections.training.college.title')}</Typography>
-                <Stack direction="row" gap={2} flexWrap="wrap" sx={{ my: 2 }}>
+                <Stack direction="row" sx={{ gap: 2, flexWrap: 'wrap', my: 2 }}>
                     {graduations.map((grad, index) => (
                         <Card key={index} sx={{ flex: '1 1 400px' }}>
                             <CardContent>
-                                <Stack direction="row" gap={1}>
+                                <Stack direction="row" sx={{ gap: 1 }}>
                                     <Tooltip title={compareTodayDate(grad.completionDate.year, grad.completionDate.month) ? t('sections.training.inProgress') : t('sections.training.completed')} arrow placement='top'>
                                         <Box>
                                             {compareTodayDate(grad.completionDate.year, grad.completionDate.month) ? <InfoRoundedIcon sx={{ color: 'info.main', fontSize: '1' }} /> : <CheckCircle sx={{ color: 'success.main', fontSize: '1' }} />}
@@ -273,8 +273,8 @@ const Training = ({ className }: { className?: string }) => {
                 </Stack>
 
                 <Typography variant="h2" sx={{ mb: 2 }}>{t('sections.training.coursesAndCertificates')}</Typography>
-                <Grid2 container sx={{ minHeight: '50vh' }} spacing={2}>
-                    <Grid2 size={{ xs: 12, sm: 8, md: 6 }}>
+                <Grid container sx={{ minHeight: '50vh' }} spacing={2}>
+                    <Grid size={{ xs: 12, sm: 8, md: 6 }}>
                         <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
                             <Typography
                                 variant="body1"
@@ -291,7 +291,7 @@ const Training = ({ className }: { className?: string }) => {
                                 <KeyboardArrowLeftRoundedIcon />
                             </StyledIconButton>
 
-                            <Box sx={carouselStyles.carousel}>
+                            <Box sx={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
                                 {certificates.map((certificate, index) => (
                                     <motion.div
                                         key={index + 1}
@@ -366,8 +366,8 @@ const Training = ({ className }: { className?: string }) => {
                                 ))}
                             </Stack>
                         </Box>
-                    </Grid2>
-                    <Grid2 size={{ xs: 12, sm: 4, md: 6 }} sx={{ flex: '1', position: 'relative' }}>
+                    </Grid>
+                    <Grid size={{ xs: 12, sm: 4, md: 6 }} sx={{ flex: '1', position: 'relative' }}>
                         {certificates.map((certificate, index) => (
                             <Box
                                 key={index + 1}
@@ -395,8 +395,8 @@ const Training = ({ className }: { className?: string }) => {
                                 </Box>
                             </Box>
                         ))}
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Container>
             <CustomModal
                 open={openModalGraduation}
@@ -459,6 +459,5 @@ const StyledIconButton = styled(({ children, ...props }: StyledIconButtonProps) 
         backgroundColor: applyOpacity(theme.palette.grey[700], 0.4),
     }
 }));
-
 
 export default Training

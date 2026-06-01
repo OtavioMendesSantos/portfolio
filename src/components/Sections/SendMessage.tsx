@@ -1,11 +1,11 @@
-import { Button, Stack, TextField, Container, CircularProgress } from "@mui/material"
-import { StyledTypography } from "../Styled/StyledComponents"
-import { useRef, useState } from "react"
+import { Button, CircularProgress, Container, Stack, TextField } from "@mui/material";
 import emailjs from 'emailjs-com';
-import BoxSection from "../common/BoxSection";
-import useSnackbar from "../../hooks/useSnackbar";
-import SnackbarAlert from "../common/SnackbarAlert";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import useSnackbar from "../../hooks/useSnackbar";
+import BoxSection from "../common/BoxSection";
+import SnackbarAlert from "../common/SnackbarAlert";
+import { StyledTypography } from "../Styled/StyledComponents";
 
 const SendMessage = ({ className }: { className?: string }) => {
     const VITE_EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID
@@ -50,7 +50,7 @@ const SendMessage = ({ className }: { className?: string }) => {
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target
-        if (name === 'email'){
+        if (name === 'email') {
             setFormData({ ...formData, [name]: value.trim() })
         } else {
             setFormData({ ...formData, [name]: value })
@@ -131,7 +131,7 @@ const SendMessage = ({ className }: { className?: string }) => {
                 <StyledTypography variant="h1" indicate>{t('sections.contact.title')}</StyledTypography>
                 <Container maxWidth="sm" sx={{ my: 4 }}>
                     <form onSubmit={handleSubmit} ref={formRef} >
-                        <Stack gap={2}>
+                        <Stack sx={{ gap: 2 }}>
                             <TextField
                                 size="small"
                                 label={t('sections.contact.form.name.label')}

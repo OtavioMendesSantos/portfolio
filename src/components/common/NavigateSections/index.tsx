@@ -85,7 +85,7 @@ const NavigateSection = ({ elements }: NavigateSectionProps) => {
                     userSelect: 'none',
                     '&:hover': {
                       color: 'primary.main',
-                      transform: !isMobile && 'scale(1.05)',
+                      transform: !isMobile ? 'scale(1.05)' : undefined,
                     }
                   }}
                   role="button"

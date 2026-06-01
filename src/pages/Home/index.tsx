@@ -1,20 +1,17 @@
-import Header from '../../components/common/Header'
-import Footer from '../../components/common/Footer'
-// import PresentationAvatar from '../../components/Models/PresentationAvatar'
-// import useResponsive from '../../hooks/useResponsive'
 import { Box, Container, useTheme } from '@mui/material'
-// import { StyledTypography as Typography } from '../../components/Styled/StyledComponents'
-import Repositories from '../../components/Sections/Repositories'
-import Skills from '../../components/Sections/Skills'
-import Presentation from '../../components/Sections/Presentation'
-import Experience from '../../components/Sections/Experience'
-import Projects from '../../components/Sections/Projects'
-import { handleOpacityColor } from '../../utils/utils'
-import Training from '../../components/Sections/Training'
 import { useEffect, useRef, useState, } from 'react'
+import Experience from '../../components/Sections/Experience'
+import Presentation from '../../components/Sections/Presentation'
+import Projects from '../../components/Sections/Projects'
+import Repositories from '../../components/Sections/Repositories'
 import SendMessage from '../../components/Sections/SendMessage'
+import Skills from '../../components/Sections/Skills'
+import Training from '../../components/Sections/Training'
+import Footer from '../../components/common/Footer'
+import Header from '../../components/common/Header'
 import NavigateSection from '../../components/common/NavigateSections'
 import ToTop from '../../components/common/ToTop'
+import { handleOpacityColor } from '../../utils/utils'
 
 const Home = () => {
   const theme = useTheme()
@@ -51,7 +48,7 @@ const Home = () => {
           <Skills className='homeSection' />
           <Experience className='homeSection' />
           <Training className='homeSection' />
-          <Projects className='homeSection' />          
+          <Projects className='homeSection' />
           <SendMessage className='homeSection' />
           <Repositories className='homeSection' />
         </Container>
