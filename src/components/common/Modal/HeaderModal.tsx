@@ -11,14 +11,12 @@ const HeaderModal = ({ title, onClose }: HeaderModalProps) => {
         <>
             <Stack
                 direction="row"
-                justifyContent="center"
-                alignItems="center"
-                sx={{ position: 'relative', p: 2 }}
+                sx={{ position: 'relative', p: 2, justifyContent: 'center', alignItems: 'center' }}
             >
-                <Typography variant="h2" align="center" sx={{ px: 4 }}>
+                <Typography variant="h2" sx={{ px: 4, textAlign: 'center' }}>
                     {title}
                 </Typography>
-                <IconButton variant="filled" onClick={onClose} color='primary' sx={{ position: 'absolute', right: 10 }}>
+                <IconButton onClick={onClose} color='primary' sx={{ position: 'absolute', right: 10 }}>
                     <CloseRoundedIcon />
                 </IconButton>
             </Stack>

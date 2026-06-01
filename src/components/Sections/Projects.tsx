@@ -1,21 +1,21 @@
-import { Box, Button, Card, CardContent, Chip, Container, FormControl, Grid2, InputLabel, Link, MenuItem, Select, SelectChangeEvent, Stack, styled, Theme, Tooltip } from '@mui/material'
-import { StyledTypography as Typography, StyledCard } from '../Styled/StyledComponents'
-import { Project } from '../../Interfaces/Project'
-import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
-import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
-import StacksList from '../common/StacksList';
-import ImgWithLoading from '../common/ImgWithLoading';
 import { CheckCircle } from '@mui/icons-material';
+import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 import ErrorRoundedIcon from '@mui/icons-material/ErrorRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
-import useResponsive from '../../hooks/useResponsive';
+import { Box, Button, Card, CardContent, Chip, Container, FormControl, Grid, InputLabel, Link, MenuItem, Select, SelectChangeEvent, Stack, styled, Theme, Tooltip } from '@mui/material';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState, useMemo } from 'react';
-import Loader from '../common/Loader/Loader';
-import { v4 as uuidv4 } from 'uuid';
-import BoxSection from '../common/BoxSection';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { v4 as uuidv4 } from 'uuid';
+import useResponsive from '../../hooks/useResponsive';
+import { Project } from '../../Interfaces/Project';
+import BoxSection from '../common/BoxSection';
+import ImgWithLoading from '../common/ImgWithLoading';
+import Loader from '../common/Loader/Loader';
+import StacksList from '../common/StacksList';
+import { StyledCard, StyledTypography as Typography } from '../Styled/StyledComponents';
 
 type Status = Project['status']
 
@@ -286,10 +286,7 @@ const Projects = ({ className }: { className?: string }) => {
                 <Card sx={{ width: '100%' }}>
                     <Stack
                         direction="row"
-                        justifyContent="space-between"
-                        alignItems="center"
-                        sx={{ p: 2, gap: 2, flexWrap: 'wrap' }}
-                        useFlexGap
+                        sx={{ p: 2, gap: 2, flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}
                     >
                         <FormControl sx={{ flex: '1 0 150px' }} size='small'>
                             <InputLabel
@@ -375,8 +372,8 @@ const Projects = ({ className }: { className?: string }) => {
                                                     {project.name}
                                                 </Typography>
                                                 <Stack direction="row" sx={{ width: '100%', flexGrow: 1 }}>
-                                                    <Grid2 container spacing={2} sx={{ width: '100%', height: '100%', justifyContent: 'center' }}>
-                                                        <Grid2 size={{ xs: 12, sm: 4 }}>
+                                                    <Grid container spacing={2} sx={{ width: '100%', height: '100%', justifyContent: 'center' }}>
+                                                        <Grid size={{ xs: 12, sm: 4 }}>
                                                             <ImgWithLoading
                                                                 alt={project.name}
                                                                 src={project.img || '/assets/images/no_image.png'}
@@ -394,8 +391,8 @@ const Projects = ({ className }: { className?: string }) => {
 
                                                                 }}
                                                             />
-                                                        </Grid2>
-                                                        <Grid2
+                                                        </Grid>
+                                                        <Grid
                                                             size={{ xs: 12, sm: 8 }}
                                                             sx={{
                                                                 display: 'flex',
@@ -452,8 +449,8 @@ const Projects = ({ className }: { className?: string }) => {
                                                                     </Link>
                                                                 }
                                                             </Stack>
-                                                        </Grid2>
-                                                    </Grid2>
+                                                        </Grid>
+                                                    </Grid>
                                                 </Stack>
                                             </CardContent>
                                         </StyledCard>

@@ -108,9 +108,8 @@ const SnackbarAlert = ({
             <Snackbar
                 open={open}
                 {...(duration !== 0 && { autoHideDuration: duration })}
-                onClose={handleClose}
                 anchorOrigin={anchorOrigin}
-                TransitionComponent={Slide}
+                slots={{ transition: Slide }}
                 action={
                     <React.Fragment>
                         <IconButton

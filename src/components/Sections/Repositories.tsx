@@ -1,19 +1,14 @@
+import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded'
 import { Box, Button, CardContent, Chip, Container, Link, Stack, useTheme } from '@mui/material'
-import { useEffect, useState } from 'react'
-import { StyledCard, StyledTypography as Typography } from '../Styled/StyledComponents'
-import { GitHubRepos } from '../../Interfaces/GitHubRepos'
-import Loader from '../common/Loader/Loader'
-import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
-import { applyOpacity } from '../../utils/utils'
 import { motion } from 'framer-motion'
-import useResponsive from '../../hooks/useResponsive'
-import BoxSection from '../common/BoxSection'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-// interface Filters {
-//     owner: boolean;
-//     forked: boolean;
-// }
+import useResponsive from '../../hooks/useResponsive'
+import { GitHubRepos } from '../../Interfaces/GitHubRepos'
+import { applyOpacity } from '../../utils/utils'
+import BoxSection from '../common/BoxSection'
+import Loader from '../common/Loader/Loader'
+import { StyledCard, StyledTypography as Typography } from '../Styled/StyledComponents'
 
 const Repositories = ({ className }: { className?: string }) => {
     const username = 'OtavioMendesSantos'
@@ -24,11 +19,6 @@ const Repositories = ({ className }: { className?: string }) => {
     const GITHUB_TOKEN: string = import.meta.env.VITE_GITHUB_TOKEN || ''
     const maxView = isMobile ? 6 : 9
     const [inView, setInView] = useState(maxView)
-
-    // const [filters, setFilters] = useState<Filters>({
-    //     owner: true,
-    //     forked: false
-    // })
     const [loadingRepos, setLoadingRepos] = useState(false)
 
     useEffect(() => {
@@ -53,52 +43,6 @@ const Repositories = ({ className }: { className?: string }) => {
             }
         }
         getUserRepositories()
-
-        /*   async function getUserRepositories2() {
-              try{
-                  const response = await fetch('https://api.github.com/users/OtavioMendesSantos')
-                  if (response.ok) {
-                      const data = await response.json()
-                      console.log(data);
-                  }
-              } catch (error) {
-                  console.log(error);
-              } finally {
-                  setLoadingRepos(false)
-              }
-          }
-          getUserRepositories2()
-          
-          async function getUserRepositories3() {
-              try{
-                  const response = await fetch(`https://api.github.com/repos/${username}/Projeto_Autodidata`)
-                  if (response.ok) {
-                      const data = await response.json()
-                      console.log(data);
-                  }
-              } catch (error) {
-                  console.log(error);
-              } finally {
-                  setLoadingRepos(false)
-              }
-          }
-          getUserRepositories3() 
-          async function getUserRepositories34() {
-              try{
-                  const response = await fetch(`https://api.github.com/repos/${username}/Projeto_Autodidata/commits`)
-                  if (response.ok) {
-                      const data = await response.json()
-                      console.log(data);
-                  }
-              } catch (error) {
-                  console.log(error);
-              } finally {
-                  setLoadingRepos(false)
-              }
-          }
-          getUserRepositories34()
-          */
-
     }, [])
 
     const handleClick = () => {
@@ -106,7 +50,7 @@ const Repositories = ({ className }: { className?: string }) => {
     }
 
     return (
-        <BoxSection title={t('sections.repositories.title')} className={className} sx={{ mb: 4}}>
+        <BoxSection title={t('sections.repositories.title')} className={className} sx={{ mb: 4 }}>
             <Typography variant="h1" indicate>{t('sections.repositories.title')}</Typography>
             <Container
                 sx={{

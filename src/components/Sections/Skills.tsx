@@ -1,16 +1,15 @@
-import { Box, Button, Container, Grid2, useTheme, Link } from '@mui/material';
-import { StyledTypography as Typography } from '../Styled/StyledComponents';
-import { Radar } from 'react-chartjs-2';
-import { ChartData, ChartOptions, Chart, RadialLinearScale, PointElement, LineElement, Filler, Tooltip as ChartTooltip, Legend } from 'chart.js';
+import { Box, Button, Container, Grid, Link, useTheme } from '@mui/material';
+import { Chart, ChartData, ChartOptions, Tooltip as ChartTooltip, Filler, Legend, LineElement, PointElement, RadialLinearScale } from 'chart.js';
 import { useRef, useState } from 'react';
-import { applyOpacity } from '../../utils/utils';
-import CustomModal from '../common/Modal';
-import ImgWithLoading from '../common/ImgWithLoading';
-import BoxSection from '../common/BoxSection';
-import smartImage from '/assets/images/smart.png';
+import { Radar } from 'react-chartjs-2';
 import { useTranslation } from 'react-i18next';
+import { applyOpacity } from '../../utils/utils';
+import BoxSection from '../common/BoxSection';
+import ImgWithLoading from '../common/ImgWithLoading';
+import CustomModal from '../common/Modal';
+import { StyledTypography as Typography } from '../Styled/StyledComponents';
+import smartImage from '/assets/images/smart.png';
 
-// Registra os componentes necessários
 Chart.register(RadialLinearScale, PointElement, LineElement, Filler, ChartTooltip, Legend);
 
 interface SkillData {
@@ -60,16 +59,6 @@ const skills: SkillData[] = [
     level: 4,
     objetivo: 6,
   },
-  // {
-  //   name: 'REACT NATIVE',
-  //   level: 1,
-  //   objetivo: 4,
-  // },
-  // {
-  //   name: 'NEXT',
-  //   level: 0,
-  //   objetivo: 4,
-  // },
 ]
 
 const Skills = ({ className }: { className?: string }) => {
@@ -139,10 +128,9 @@ const Skills = ({ className }: { className?: string }) => {
     <BoxSection title={t('sections.skills.title')} className={className}>
       <Typography indicate variant='h1'>{t('sections.skills.title')}</Typography>
       <Container sx={{ height: '100%' }}>
-        <Grid2 container sx={{ minHeight: '50vh', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Grid2
+        <Grid container sx={{ minHeight: '50vh', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <Grid
             size={{ xs: 12, sm: 12, md: 6 }}
-            height={'100%'}
             sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}
           >
             <Radar
@@ -151,8 +139,8 @@ const Skills = ({ className }: { className?: string }) => {
               options={options}
               style={{ height: '100%', width: '100%', aspectRatio: '1 / 1' }}
             />
-          </Grid2>
-          <Grid2
+          </Grid>
+          <Grid
             size={{ xs: 12, sm: 12, md: 6 }}
             sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', flexDirection: 'column' }}
           >
@@ -171,8 +159,8 @@ const Skills = ({ className }: { className?: string }) => {
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 2 }}>
               <Button variant='outlined' onClick={() => setOpen(true)}>{t('sections.skills.howEvaluate')}</Button>
             </Box>
-          </Grid2>
-        </Grid2>
+          </Grid>
+        </Grid>
 
       </Container>
       <CustomModal open={open} onClose={() => setOpen(false)} title={t('sections.skills.howEvaluate')} maxWidth="700px">

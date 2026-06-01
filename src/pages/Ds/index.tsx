@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import { Box, Button, Chip, Collapse, Container, Divider, IconButton, IconButtonProps, Paper, PaperProps, styled, Typography, useTheme } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import Header from '../../components/common/Header';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Box, Button, Chip, Collapse, Container, Divider, IconButton, IconButtonProps, Paper, PaperProps, styled, Typography, useTheme } from '@mui/material';
+import React, { useState } from 'react';
 import Footer from '../../components/common/Footer';
-import React from 'react';
+import Header from '../../components/common/Header';
 
 const Ds = () => {
     const theme = useTheme();
@@ -57,10 +56,10 @@ const Ds = () => {
     return (
         <Box>
             <Header position='sticky' />
-            <Typography my={2} variant="h1" align="center">Desing System</Typography>
+            <Typography sx={{ my: 2, textAlign: 'center' }} variant="h1">Desing System</Typography>
             <Container sx={{ minHeight: 'calc(100vh - 60px)', height: '100%', display: 'flex', flexDirection: 'column', gap: 4 }}>
                 <StyledPaper>
-                    <Typography my={2} variant="h2" align="center">
+                    <Typography sx={{ my: 2, textAlign: 'center' }} variant="h2">
                         Paleta de Cores - {theme.palette.mode} mode
                     </Typography>
                     <StyledIconButton onClick={() => handleClick('box')}>
@@ -78,7 +77,7 @@ const Ds = () => {
                     </Collapse>
                 </StyledPaper>
                 <StyledPaper>
-                    <Typography my={2} variant="h2" align="center">Tipografia</Typography>
+                    <Typography sx={{ my: 2, textAlign: 'center' }} variant="h2">Tipografia</Typography>
                     <StyledIconButton onClick={() => handleClick('typography')}>
                         {paperColapsed.typography ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                     </StyledIconButton>
@@ -86,73 +85,73 @@ const Ds = () => {
                         <Divider textAlign='left'>
                             <Chip label='variant = h1' size="small" />
                         </Divider>
-                        <Typography my={2} variant="h1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
+                        <Typography sx={{ my: 2 }} variant="h1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = h2' size="small" />
                         </Divider>
-                        <Typography my={2} variant="h2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
+                        <Typography sx={{ my: 2 }} variant="h2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = h3' size="small" />
                         </Divider>
-                        <Typography my={2} variant="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
+                        <Typography sx={{ my: 2 }} variant="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = h4' size="small" />
                         </Divider>
-                        <Typography my={2} variant="h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
+                        <Typography sx={{ my: 2 }} variant="h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = h5' size="small" />
                         </Divider>
-                        <Typography my={2} variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
+                        <Typography sx={{ my: 2 }} variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = h6' size="small" />
                         </Divider>
-                        <Typography my={2} variant="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
+                        <Typography sx={{ my: 2 }} variant="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, accusamus?</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = body1' size="small" />
                         </Divider>
-                        <Typography my={2} variant="body1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="body1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = body2' size="small" />
                         </Divider>
-                        <Typography my={2} variant="body2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="body2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
 
 
                         <Divider textAlign='left'>
                             <Chip label='variant = subtitle1' size="small" />
                         </Divider>
-                        <Typography my={2} variant="subtitle1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="subtitle1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = subtitle2' size="small" />
                         </Divider>
-                        <Typography my={2} variant="subtitle2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="subtitle2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = button' size="small" />
                         </Divider>
-                        <Typography my={2} variant="button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="button">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = caption' size="small" />
                         </Divider>
-                        <Typography my={2} variant="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
 
                         <Divider textAlign='left'>
                             <Chip label='variant = overline' size="small" />
                         </Divider>
-                        <Typography my={2} variant="overline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
+                        <Typography sx={{ my: 2 }} variant="overline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corrupti iste hic qui eum vitae ducimus optio enim nostrum est.</Typography>
                     </Collapse>
 
                 </StyledPaper>
                 <StyledPaper>
-                    <Typography my={2} variant="h2" align="center">Botão</Typography>
+                    <Typography sx={{ my: 2, textAlign: 'center' }} variant="h2">Botão</Typography>
                     <StyledIconButton onClick={() => handleClick('button')}>
                         {paperColapsed.button ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                     </StyledIconButton>

@@ -1,11 +1,11 @@
-import { Box, Grid2, IconButton } from '@mui/material'
-import { StyledTypography as Typography } from '../Styled/StyledComponents'
 import KeyboardDoubleArrowDown from '@mui/icons-material/KeyboardDoubleArrowDown'
-import StacksList from '../common/StacksList'
-import useResponsive from '../../hooks/useResponsive'
+import { Box, Grid, IconButton } from '@mui/material'
 import { motion } from 'framer-motion'
-import BoxSection from '../common/BoxSection'
 import { useTranslation } from 'react-i18next'
+import useResponsive from '../../hooks/useResponsive'
+import BoxSection from '../common/BoxSection'
+import StacksList from '../common/StacksList'
+import { StyledTypography as Typography } from '../Styled/StyledComponents'
 
 const Presentation = ({ className }: { className?: string }) => {
     const { isMobile } = useResponsive()
@@ -50,7 +50,7 @@ const Presentation = ({ className }: { className?: string }) => {
             title="Sobre mim"
             className={className}
         >
-            <Grid2
+            <Grid
                 container
                 sx={{
                     maxHeight: '100%',
@@ -60,11 +60,6 @@ const Presentation = ({ className }: { className?: string }) => {
                     justifyContent: 'center',
                 }}
             >
-                {/* {!isMobile &&
-              <Grid2 size={{ xs: 0, sm: 0, md: 6 }} height={"100%"}>
-                <PresentationAvatar />
-              </Grid2>
-            } */}
                 <motion.div
                     initial={{ opacity: 0, x: 300 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -77,17 +72,14 @@ const Presentation = ({ className }: { className?: string }) => {
                         justifyContent: 'center',
                     }}
                 >
-                    <Grid2
+                    <Grid
                         container
-                        alignItems="center"
                         size={{ xs: 12, md: 12 }}
-                        display="flex"
-                        flexDirection="column"
+                        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
                     >
-                        <Grid2
+                        <Grid
                             size={{ xs: 12, sm: 12, md: 6 }}
-                            display="flex"
-                            flexDirection="column"
+                            sx={{ display: 'flex', flexDirection: 'column' }}
                         >
                             <Typography variant="h1" indicate>{t('presentation.name')}</Typography>
                             <Typography variant="subtitle1">{t('presentation.job')}</Typography>
@@ -102,10 +94,10 @@ const Presentation = ({ className }: { className?: string }) => {
                                 title={t('presentation.contacts')}
                                 itens={contactsList}
                             />
-                        </Grid2>
-                    </Grid2>
+                        </Grid>
+                    </Grid>
                 </motion.div>
-            </Grid2>
+            </Grid>
 
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 2 }}>
                 <IconButton
