@@ -1,21 +1,16 @@
+import { Analytics } from "@vercel/analytics/react"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Home from './pages/Home'
-import Blog from './pages/Blog'
-import NotFound from './pages/NotFound'
-import Ds from './pages/Ds'
 import { ThemeProviderWrapper } from './Context/ThemeContext'
-import { Analytics } from "@vercel/analytics/react"
+import Ds from './pages/Ds'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Home />,
-    },
-    {
-      path: '/Blog',
-      element: <Blog />,
     },
     {
       path: '/Ds',
