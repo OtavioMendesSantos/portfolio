@@ -3,7 +3,6 @@ import { useEffect, useRef, useState, } from 'react'
 import Experience from '../../components/Sections/Experience'
 import Presentation from '../../components/Sections/Presentation'
 import Projects from '../../components/Sections/Projects'
-import Repositories from '../../components/Sections/Repositories'
 import SendMessage from '../../components/Sections/SendMessage'
 import Skills from '../../components/Sections/Skills'
 import TechnologiesCarousel from '../../components/Sections/TechnologiesCarousel'
@@ -52,7 +51,7 @@ const Home = () => {
           <Training className='homeSection' />
           <Projects className='homeSection' />
           <SendMessage className='homeSection' />
-          <Repositories className='homeSection' />
+          {/* <Repositories className='homeSection' /> */}
         </Container>
         <Footer />
         <ToTop />

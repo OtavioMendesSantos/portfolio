@@ -7,7 +7,7 @@ import { applyOpacity } from '../../utils/utils';
 import BoxSection from '../common/BoxSection';
 import TypingText from '../common/TypingText';
 import { StyledTypography as Typography } from '../Styled/StyledComponents';
-import { GitHub, LinkedIn } from '@mui/icons-material';
+import { GitHub, LinkedIn, Mail } from '@mui/icons-material';
 
 const Presentation = ({ className }: { className?: string }) => {
     const { t } = useTranslation();
@@ -20,6 +20,11 @@ const Presentation = ({ className }: { className?: string }) => {
 
     const contactsList = [
         {
+            label: 'Email',
+            href: 'mailto:otaviomendes.dev@gmail.com',
+            icon: Mail
+        },
+        {
             label: 'LinkedIn',
             href: 'https://www.linkedin.com/in/otaviomendessantos/',
             icon: LinkedIn
@@ -28,7 +33,7 @@ const Presentation = ({ className }: { className?: string }) => {
             label: 'GitHub',
             href: 'https://github.com/OtavioMendesSantos',
             icon: GitHub
-        }
+        },
     ];
 
     return (

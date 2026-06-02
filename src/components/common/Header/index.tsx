@@ -56,7 +56,7 @@ const Header = ({ position = 'static' }: { position?: HeaderPosition }) => {
             maxWidth: '1180px',
             height: '100%',
             mx: 'auto',
-            px: { xs: 2, md: 0 },
+            px: 3,
             justifyContent: 'space-between',
             alignItems: 'center',
           }}

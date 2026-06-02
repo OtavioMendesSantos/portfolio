@@ -95,118 +95,62 @@
     },
     "experience": {
       "title": "Experience",
-      "responsibilities": "Responsibilities and duties",
       "items": {
         "freelance": {
-          "position": "Full-stack Developer",
           "company": "Freelance",
+          "position": "Full-stack Developer",
           "startMonth": 6,
           "startYear": 2025,
           "isCurrent": true,
-          "tasks": {
-            "uiux": {
-              "title": "UI/UX Development",
-              "description": "Development of responsive UI/UX for web and mobile using React, TypeScript, JavaScript, HTML, CSS/SASS, Tailwind, and WordPress."
-            },
-            "backend": {
-              "title": "Back-end Development",
-              "description": "End-to-end development with Node.js and Express, creation and refactoring of APIs, integration with PostgreSQL, and real-time communication via WebSocket."
-            },
-            "refactoring": {
-              "title": "Optimization and Quality",
-              "description": "Refactoring, optimization, and bug fixing, ensuring performance, stability, and maintainability of applications."
-            }
-          }
+          "summary": "End-to-end development for independent clients, covering requirements gathering, architecture, implementation, integrations, and deployment.",
+          "highlights": [
+            "Building responsive interfaces and web/mobile systems.",
+            "Development of RESTful APIs, external integrations, and real-time communication.",
+            "Refactoring, bug fixing, and performance optimization."
+          ],
+          "technologies": ["React", "TypeScript", "Node.js", "Express", "NestJS", "PostgreSQL", "WebSockets", "WordPress"]
         },
         "areopagus": {
-          "position": "Full-stack Developer",
           "company": "Areopagus Io",
+          "position": "Full-stack Developer",
           "startMonth": 12,
           "startYear": 2025,
           "endMonth": 5,
           "endYear": 2026,
-          "tasks": {
-            "highPerformanceSystems": {
-              "title": "High-Performance Systems",
-              "description": "Developed and maintained highly available microservices in Go (Golang), optimizing the backend to support loads above 1000 ops/s."
-            },
-            "cloudNativeInfrastructure": {
-              "title": "Cloud-Native Infrastructure",
-              "description": "Configured and managed environments on Google Cloud Platform (GCP) using Cloud Run, Artifact Registry, Cloud Secrets, and VM instances, ensuring serverless scalability and security."
-            },
-            "observability": {
-              "title": "Observability and Monitoring",
-              "description": "Implemented observability dashboards in Grafana, using PostgreSQL and Prometheus as data sources and GitHub Webhooks integration for event monitoring."
-            },
-            "dataAndEnvironments": {
-              "title": "Data and Environment Management",
-              "description": "Configured and administered MongoDB Atlas clusters, handling the provisioning and maintenance of development and production environments."
-            }
-          }
+          "summary": "Working on high-performance backend, cloud-native infrastructure, and observability.",
+          "highlights": [
+            "Development of microservices in Go for loads exceeding 1000 ops/s.",
+            "GCP environment configuration focusing on scalability and security.",
+            "Implementation of observability dashboards and monitoring with Grafana, Prometheus, and PostgreSQL."
+          ],
+          "technologies": ["Go", "GCP", "Cloud Run", "Artifact Registry", "Cloud Secrets", "Grafana", "Prometheus", "PostgreSQL", "MongoDB Atlas"]
         },
         "pickngoMobile": {
-          "position": "Mobile App Developer",
           "company": "PickNGo",
+          "position": "Mobile Developer",
           "startMonth": 5,
           "startYear": 2025,
           "endMonth": 6,
           "endYear": 2025,
-          "tasks": {
-            "refactoring": {
-              "title": "Mobile Refactoring",
-              "description": "Actively participated in the refactoring of the mobile app for delivery drivers, collaborating with the team to make it more performant, modern, and intuitive."
-            },
-            "bestPractices": {
-              "title": "Best Practices",
-              "description": "Contributed to the adoption of development best practices, focusing on modularity, scalability, and maintainability."
-            },
-            "interfaces": {
-              "title": "Interface Implementation",
-              "description": "Implemented complete interfaces and navigation flows based on detailed prototypes in Figma, strictly respecting design guidelines."
-            },
-            "i18n": {
-              "title": "Internationalization",
-              "description": "Implemented and maintained the application's internationalization, using modern tools for translation and multi-language support."
-            }
-          }
+          "summary": "Mobile app refactoring for delivery drivers.",
+          "highlights": [
+            "Building high-fidelity mobile interfaces based on Figma with internationalization support."
+          ],
+          "technologies": ["React Native", "TypeScript", "i18n", "Figma"]
         },
         "pickngoFrontend": {
-          "position": "Front-end Developer",
           "company": "PickNGo",
+          "position": "Front-end Developer",
           "startMonth": 4,
           "startYear": 2024,
           "endMonth": 6,
           "endYear": 2025,
-          "tasks": {
-            "systemRefactoring": {
-              "title": "System Refactoring",
-              "description": "Participated in refactoring the company's main system alongside the front-end team, making it more performant, modern, and intuitive, with new features and better user experience."
-            },
-            "challengeResolution": {
-              "title": "Challenge Resolution",
-              "description": "Solved technical challenges with creative and efficient approaches, contributing innovative solutions adopted as best practices by the team."
-            },
-            "componentDevelopment": {
-              "title": "Component Development",
-              "description": "Developed and maintained components such as dynamic forms, interactive maps, support for multiple brands (whitelabel), and global notification system (snackbar), focusing on modularity and usability."
-            },
-            "typescript": {
-              "title": "TypeScript Typing",
-              "description": "Created and maintained global types, interfaces, and DTOs in TypeScript, promoting consistency between application layers and reducing integration errors."
-            },
-            "bugFixing": {
-              "title": "Bug Resolution",
-              "description": "Worked on identifying and resolving bugs, collaborating with the back-end team to ensure system stability and improve communication between layers."
-            },
-            "libraryImplementation": {
-              "title": "Library Implementation",
-              "description": "Researched, tested, and implemented libraries that best fit the project's needs, focusing on performance, usability, and maintainability."
-            },
-            "stateManagement": {
-              "title": "State Management",
-              "description": "Implemented and maintained global state management, ensuring predictability, data consistency, and facilitating system scalability."
-            }
-          }
+          "summary": "Modernization of the main logistics system.",
+          "highlights": [
+            "Main system refactoring with Clean Code and TypeScript.",
+            "Implementation of whitelabel structure and complex flows."
+          ],
+          "technologies": ["React", "TypeScript", "i18n", "Figma", "Whitelabel", "Maps"]
         }
       }
     },
