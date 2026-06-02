@@ -30,7 +30,7 @@ const Projects = ({ className }: { className?: string }) => {
         {
             id: 'clearkanban',
             name: t('sections.projects.items.clearKanban.name'),
-            img: 'assets/images/clearkanban.png',
+            img: '/assets/images/clearkanban.png',
             description: t('sections.projects.items.clearKanban.description'),
             linkProjeto: 'https://clearkanban.com',
             status: 'em_desenvolvimento',
@@ -39,7 +39,7 @@ const Projects = ({ className }: { className?: string }) => {
         {
             id: 'dogs',
             name: t('sections.projects.items.dogs.name'),
-            img: 'assets/images/dogs.jpg',
+            img: '/assets/images/dogs.jpg',
             description: t('sections.projects.items.dogs.description'),
             linkRepositorio: 'https://github.com/OtavioMendesSantos/Projeto_Autodidata-React/tree/main/React-Origamid/08-Projeto_Final',
             linkProjeto: 'https://dogs-otavio.vercel.app/',
@@ -49,7 +49,7 @@ const Projects = ({ className }: { className?: string }) => {
         {
             id: 'fantastic-animals',
             name: t('sections.projects.items.fantasticAnimals.name'),
-            img: 'assets/images/animais_fantasticos.jpg',
+            img: '/assets/images/animais_fantasticos.jpg',
             description: t('sections.projects.items.fantasticAnimals.description'),
             linkRepositorio: 'https://github.com/OtavioMendesSantos/Sites_Portifolio/tree/main/projetos/origamid/Animais_Fantasticos',
             linkProjeto: 'https://otaviomendessantos.github.io/Sites_Portifolio/projetos/origamid/Animais_Fantasticos/index.html',

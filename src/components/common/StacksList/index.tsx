@@ -107,7 +107,7 @@ const StacksList = (
               <Tooltip title={isMobile ? '' : item.name.toUpperCase()} arrow>
                 <Box>
                   <ImgWithLoading
-                    src={`assets/svgs/${item.name}-original.svg`}
+                    src={`/assets/svgs/${item.name}-original.svg`}
                     alt={`${item.name} - logo`}
                     href={item.href}
                     imgProps={{
