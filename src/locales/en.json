@@ -3,7 +3,12 @@
     "name": "Otávio Mendes Santos",
     "kicker": "Software engineering and cloud-native architecture",
     "developerLabel": "Developer",
-    "typingWords": ["Full Stack", "Back-end", "Front-end", "Mobile"],
+    "typingWords": [
+      "Full Stack",
+      "Back-end",
+      "Front-end",
+      "Mobile"
+    ],
     "job": "Full Stack Developer",
     "description": "Software development focused on backend and high performance. Practical experience creating resilient APIs, data modeling, DevOps practices, and modern interface development.",
     "dominateTechnologies": "Technologies I dominate",
@@ -92,14 +97,12 @@
       "title": "Experience",
       "responsibilities": "Responsibilities and duties",
       "items": {
-        "areopagus": {
-          "position": "Full Stack Developer",
-          "company": "Areopagus Io | Dec 2025 - Present",
-          "tasks": {}
-        },
         "freelance": {
-          "position": "Full Stack Developer",
-          "company": "Freelance | Jun 2025 - Dec 2025",
+          "position": "Full-stack Developer",
+          "company": "Freelance",
+          "startMonth": 6,
+          "startYear": 2025,
+          "isCurrent": true,
           "tasks": {
             "uiux": {
               "title": "UI/UX Development",
@@ -115,9 +118,39 @@
             }
           }
         },
+        "areopagus": {
+          "position": "Full-stack Developer",
+          "company": "Areopagus Io",
+          "startMonth": 12,
+          "startYear": 2025,
+          "endMonth": 5,
+          "endYear": 2026,
+          "tasks": {
+            "highPerformanceSystems": {
+              "title": "High-Performance Systems",
+              "description": "Developed and maintained highly available microservices in Go (Golang), optimizing the backend to support loads above 1000 ops/s."
+            },
+            "cloudNativeInfrastructure": {
+              "title": "Cloud-Native Infrastructure",
+              "description": "Configured and managed environments on Google Cloud Platform (GCP) using Cloud Run, Artifact Registry, Cloud Secrets, and VM instances, ensuring serverless scalability and security."
+            },
+            "observability": {
+              "title": "Observability and Monitoring",
+              "description": "Implemented observability dashboards in Grafana, using PostgreSQL and Prometheus as data sources and GitHub Webhooks integration for event monitoring."
+            },
+            "dataAndEnvironments": {
+              "title": "Data and Environment Management",
+              "description": "Configured and administered MongoDB Atlas clusters, handling the provisioning and maintenance of development and production environments."
+            }
+          }
+        },
         "pickngoMobile": {
           "position": "Mobile App Developer",
-          "company": "PickNGo | May 2025 - Jun 2025",
+          "company": "PickNGo",
+          "startMonth": 5,
+          "startYear": 2025,
+          "endMonth": 6,
+          "endYear": 2025,
           "tasks": {
             "refactoring": {
               "title": "Mobile Refactoring",
@@ -139,7 +172,11 @@
         },
         "pickngoFrontend": {
           "position": "Front-end Developer",
-          "company": "PickNGo | April 2024 - June 2025",
+          "company": "PickNGo",
+          "startMonth": 4,
+          "startYear": 2024,
+          "endMonth": 6,
+          "endYear": 2025,
           "tasks": {
             "systemRefactoring": {
               "title": "System Refactoring",

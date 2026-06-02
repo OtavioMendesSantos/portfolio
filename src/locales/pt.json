@@ -3,7 +3,12 @@
     "name": "Otávio Mendes Santos",
     "kicker": "Engenharia de software e arquitetura cloud-native",
     "developerLabel": "Desenvolvedor",
-    "typingWords": ["Full Stack", "Back-end", "Front-end", "Mobile"],
+    "typingWords": [
+      "Full Stack",
+      "Back-end",
+      "Front-end",
+      "Mobile"
+    ],
     "job": "Desenvolvedor Full Stack",
     "description": "Desenvolvimento de software com foco em backend e alta performance. Experiência prática na criação de APIs resilientes, modelagem de dados, práticas de DevOps e desenvolvimento de interfaces modernas.",
     "dominateTechnologies": "Tecnologias que domino",
@@ -92,14 +97,12 @@
       "title": "Experiência",
       "responsibilities": "Atribuições e responsabilidades",
       "items": {
-        "areopagus": {
-          "position": "Desenvolvedor Full Stack",
-          "company": "Areopagus Io | Dez 2025 - Atualmente",
-          "tasks": {}
-        },
         "freelance": {
-          "position": "Desenvolvedor Full Stack",
-          "company": "Freelance | Jun 2025 - Dez 2025",
+          "position": "Desenvolvedor Full-stack",
+          "company": "Freelance",
+          "startMonth": 6,
+          "startYear": 2025,
+          "isCurrent": true,
           "tasks": {
             "uiux": {
               "title": "Desenvolvimento UI/UX",
@@ -115,9 +118,39 @@
             }
           }
         },
+        "areopagus": {
+          "position": "Desenvolvedor Full-stack",
+          "company": "Areopagus Io",
+          "startMonth": 12,
+          "startYear": 2025,
+          "endMonth": 5,
+          "endYear": 2026,
+          "tasks": {
+            "highPerformanceSystems": {
+              "title": "Sistemas de Alta Performance",
+              "description": "Desenvolvo e mantenho microsserviços de alta disponibilidade em Go (Golang), otimizando o backend para suportar cargas superiores a 1000 ops/s."
+            },
+            "cloudNativeInfrastructure": {
+              "title": "Infraestrutura Cloud-Native",
+              "description": "Configurei e gerenciei ambientes no Google Cloud Platform (GCP) utilizando Cloud Run, Artifact Registry, Cloud Secrets e instâncias de VM, garantindo escalabilidade serverless e segurança."
+            },
+            "observability": {
+              "title": "Observabilidade e Monitoramento",
+              "description": "Implementei dashboards de observabilidade no Grafana, utilizando PostgreSQL e Prometheus como fonte de dados e integração com GitHub Webhooks para monitoramento de eventos."
+            },
+            "dataAndEnvironments": {
+              "title": "Gestão de Dados e Ambientes",
+              "description": "Configurei e administrei clusters no MongoDB Atlas, sendo responsável pelo provisionamento e manutenção de ambientes de desenvolvimento e produção."
+            }
+          }
+        },
         "pickngoMobile": {
           "position": "Desenvolvedor de Aplicativos Móveis",
-          "company": "PickNGo | Mai 2025 - Jun 2025",
+          "company": "PickNGo",
+          "startMonth": 5,
+          "startYear": 2025,
+          "endMonth": 6,
+          "endYear": 2025,
           "tasks": {
             "refactoring": {
               "title": "Refatoração Mobile",
@@ -139,7 +172,11 @@
         },
         "pickngoFrontend": {
           "position": "Desenvolvedor Front End",
-          "company": "PickNGo | Abril 2024 - Junho 2025",
+          "company": "PickNGo",
+          "startMonth": 4,
+          "startYear": 2024,
+          "endMonth": 6,
+          "endYear": 2025,
           "tasks": {
             "systemRefactoring": {
               "title": "Refatoração do Sistema",
