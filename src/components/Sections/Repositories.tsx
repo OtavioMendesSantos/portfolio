@@ -16,7 +16,7 @@ const Repositories = ({ className }: { className?: string }) => {
     const [repos, setRepos] = useState<GitHubRepos[]>([])
     const theme = useTheme()
     const { t } = useTranslation()
-    const GITHUB_TOKEN: string = import.meta.env.VITE_GITHUB_TOKEN || ''
+    const GITHUB_TOKEN: string = import.meta.env.PUBLIC_GITHUB_TOKEN || ''
     const maxView = isMobile ? 6 : 9
     const [inView, setInView] = useState(maxView)
     const [loadingRepos, setLoadingRepos] = useState(false)
