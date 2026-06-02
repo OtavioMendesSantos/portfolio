@@ -1,20 +1,74 @@
 {
   "presentation": {
     "name": "Otávio Mendes Santos",
-    "job": "Desenvolvedor Web Front-end",
-    "description": "Apaixonado por tecnologia, sou um desenvolvedor web júnior em constante aprendizado. Sou um profissional comunicativo e colaborativo, que valoriza o trabalho em equipe e a troca de conhecimento.",
+    "kicker": "Engenharia de software e arquitetura cloud-native",
+    "developerLabel": "Desenvolvedor",
+    "typingWords": [
+      "Full Stack",
+      "Back-end",
+      "Front-end",
+      "Mobile"
+    ],
+    "job": "Desenvolvedor Full Stack",
+    "description": "Desenvolvimento de software com foco em backend e alta performance. Experiência prática na criação de APIs resilientes, modelagem de dados, práticas de DevOps e desenvolvimento de interfaces modernas.",
     "dominateTechnologies": "Tecnologias que domino",
     "contacts": "Contatos",
     "goMainPage": "Ir para a página principal"
   },
   "sections": {
     "skills": {
-      "title": "Habilidades",
-      "basicKnowledge": "Conhecimento básico ou iniciante",
-      "intermediateKnowledge": "Conhecimento intermediário, capaz de usar em projetos pequenos",
-      "advancedKnowledge": "Conhecimento avançado, experiência específica",
-      "expertKnowledge": "Expertise ou nível de domínio",
-      "howEvaluate": "Como me autoavalio?",
+      "title": "Stack Técnica",
+      "kicker": "Competências técnicas",
+      "headline": "Backend, dados, infraestrutura e interfaces modernas.",
+      "description": "Atuo no ciclo completo de desenvolvimento, com foco atual em serviços backend escaláveis, arquitetura de APIs e operação de sistemas em produção.",
+      "categories": {
+        "backend": "Backend & APIs",
+        "frontend": "Front-end",
+        "database": "Bancos de Dados",
+        "devops": "Infraestrutura & DevOps"
+      },
+      "cards": {
+        "backend": {
+          "eyebrow": "Backend & APIs",
+          "title": "Serviços escaláveis e integrações",
+          "description": "Construção de APIs, microsserviços e fluxos de comunicação entre sistemas.",
+          "points": [
+            "Construção de APIs RESTful escaláveis e seguras.",
+            "Desenho de serviços com foco em disponibilidade e concorrência.",
+            "Integração com autenticação, eventos em tempo real e serviços externos."
+          ]
+        },
+        "frontend": {
+          "eyebrow": "Front-end & Interfaces",
+          "title": "Produtos web, mobile e whitelabel",
+          "description": "Criação e evolução de interfaces responsivas para produtos digitais.",
+          "points": [
+            "Componentização de telas e fluxos com foco em manutenção.",
+            "Implementação de experiências whitelabel e interfaces de alta fidelidade.",
+            "Otimização de performance visual em aplicações web e mobile."
+          ]
+        },
+        "database": {
+          "eyebrow": "Bancos de Dados & Modelagem",
+          "title": "Dados consistentes e consultas eficientes",
+          "description": "Modelagem, manutenção e otimização de dados para aplicações em produção.",
+          "points": [
+            "Modelagem de entidades, relações e regras de negócio.",
+            "Otimização de consultas e análise de gargalos.",
+            "Organização de persistência para reduzir inconsistências e retrabalho."
+          ]
+        },
+        "infrastructure": {
+          "eyebrow": "Infraestrutura & Observabilidade",
+          "title": "Deploy, monitoramento e operação",
+          "description": "Configuração de ambientes, pipelines e visibilidade operacional.",
+          "points": [
+            "Provisionamento de ambientes para desenvolvimento e produção.",
+            "Acompanhamento de métricas, eventos e saúde de serviços.",
+            "Apoio a deploys mais previsíveis, rastreáveis e seguros."
+          ]
+        }
+      },
       "current": "Atual",
       "target": "Meta",
       "technologies": {
@@ -33,103 +87,70 @@
         "express": "Express",
         "mongodb": "MongoDB",
         "jest": "Jest",
-        "python": "Python"
+        "python": "Python",
+        "queryOptimization": "Otimização de Queries"
       },
       "legend": "Legenda",
-      "seeMore": "Ver mais",
-      "evaluationCriteria": "1. Autoavaliação por Critérios Específicos",
-      "evaluationCriteriaDescription": "Reflito sobre meus projetos passados e avalio meu desempenho com base nos resultados práticos: <br /> 1-3: Conhecimento básico ou iniciante. <br /> 4-6: Conhecimento intermediário, capaz de aplicar em projetos pequenos. <br /> 7-8: Conhecimento avançado, com experiência sólida. <br /> 9-10: Expertise ou nível de domínio.",
-      "externalFeedback": "2. Avaliação de Feedback Externo",
-      "externalFeedbackDescription": "Peço feedback a colegas, mentores ou líderes (gerentes, colegas de trabalho, professores) para avaliar minhas habilidades atuais. Isso oferece uma perspectiva externa e equilibra minha autoavaliação.",
-      "goals": "3. Objetivos de Curto, Médio e Longo Prazo",
-      "goalsDescription": "Curto prazo (1-3 meses): Habilidades que desejo melhorar em breve. \n Médio prazo (6 meses - 1 ano): Habilidades que exigem mais prática ou aprendizado. <br /> Longo prazo (1-2 anos): Habilidades mais complexas ou de nível avançado.",
-      "smartMethod": "4. Modelo SMART para Metas Almejadas",
-      "smartMethodDescription": "Specific (Específico): Determino exatamente qual aspecto da habilidade desejo melhorar. <br /> Measurable (Mensurável): Como o sucesso pode ser medido? Por exemplo, concluir um projeto ou obter uma certificação. <br /> Attainable (Atingível): A habilidade é realista considerando meu nível atual e contexto? <br /> Relevant (Relevante): Como essa habilidade contribui para meus objetivos de carreira ou pessoais? <br /> Time-bound (Temporal): Em quanto tempo espero atingir esse nível?",
-      "marketBenchmarking": "5. Benchmarking com o Mercado",
-      "marketBenchmarkingDescription": "Pesquiso as expectativas do mercado para as habilidades que desejo desenvolver, ajustando minhas avaliações de acordo com as exigências da minha área de atuação."
+      "seeMore": "Ver mais"
     },
     "experience": {
       "title": "Experiência",
-      "responsibilities": "Atribuições e responsabilidades",
       "items": {
-        "areopagus": {
-          "position": "Desenvolvedor Full Stack",
-          "company": "Areopagus Io | Dez 2025 - Atualmente",
-          "tasks": {}
-        },
         "freelance": {
-          "position": "Desenvolvedor Full Stack",
-          "company": "Freelance | Jun 2025 - Dez 2025",
-          "tasks": {
-            "uiux": {
-              "title": "Desenvolvimento UI/UX",
-              "description": "Desenvolvimento de UI/UX responsivas para web e mobile usando React, TypeScript, JavaScript, HTML, CSS/SASS, Tailwind e WordPress."
-            },
-            "backend": {
-              "title": "Desenvolvimento Back-end",
-              "description": "Desenvolvimento end-to-end com Node.js e Express, criação e refatoração de APIs, integração com PostgreSQL e comunicação em tempo real via WebSocket."
-            },
-            "refactoring": {
-              "title": "Otimização e Qualidade",
-              "description": "Refatoração, otimização e correção de bugs, garantindo performance, estabilidade e manutenibilidade das aplicações."
-            }
-          }
+          "company": "Freelance",
+          "position": "Desenvolvedor Full-stack",
+          "startMonth": 6,
+          "startYear": 2025,
+          "isCurrent": true,
+          "summary": "Desenvolvimento end-to-end para clientes independentes, cobrindo levantamento, arquitetura, implementação, integrações e deploy.",
+          "highlights": [
+            "Construção de interfaces responsivas e sistemas web/mobile.",
+            "Desenvolvimento de APIs RESTful, integrações externas e comunicação em tempo real.",
+            "Refatoração, correção de bugs e otimização de performance."
+          ],
+          "technologies": ["React", "TypeScript", "Node.js", "Express", "NestJS", "PostgreSQL", "WebSockets", "WordPress"]
+        },
+        "areopagus": {
+          "company": "Areopagus Io",
+          "position": "Desenvolvedor Full-stack",
+          "startMonth": 12,
+          "startYear": 2025,
+          "endMonth": 5,
+          "endYear": 2026,
+          "summary": "Atuação em backend de alta performance, infraestrutura cloud-native e observabilidade.",
+          "highlights": [
+            "Desenvolvimento de microsserviços em Go para cargas superiores a 1000 ops/s.",
+            "Configuração de ambientes GCP com foco em escalabilidade e segurança.",
+            "Implementação de dashboards e monitoramento com Grafana, Prometheus e PostgreSQL."
+          ],
+          "technologies": ["Go", "GCP", "Cloud Run", "Artifact Registry", "Cloud Secrets", "Grafana", "Prometheus", "PostgreSQL", "MongoDB Atlas"]
         },
         "pickngoMobile": {
-          "position": "Desenvolvedor de Aplicativos Móveis",
-          "company": "PickNGo | Mai 2025 - Jun 2025",
-          "tasks": {
-            "refactoring": {
-              "title": "Refatoração Mobile",
-              "description": "Participei ativamente da refatoração do aplicativo mobile para entregadores, colaborando com a equipe para torná-lo mais performático, moderno e intuitivo."
-            },
-            "bestPractices": {
-              "title": "Boas Práticas",
-              "description": "Contribuí para a adoção de boas práticas de desenvolvimento, com foco em modularidade, escalabilidade e manutenibilidade."
-            },
-            "interfaces": {
-              "title": "Implementação de Interfaces",
-              "description": "Implementei interfaces e fluxos completos de navegação a partir de protótipos detalhados no Figma, respeitando os guidelines de design."
-            },
-            "i18n": {
-              "title": "Internacionalização",
-              "description": "Implementei e mantive a internacionalização do aplicativo, utilizando ferramentas modernas para tradução e suporte a múltiplos idiomas."
-            }
-          }
+          "company": "PickNGo",
+          "position": "Desenvolvedor Mobile",
+          "startMonth": 5,
+          "startYear": 2025,
+          "endMonth": 6,
+          "endYear": 2025,
+          "summary": "Refatoração do aplicativo mobile para entregadores.",
+          "highlights": [
+            "Construção de interfaces mobile fiéis ao Figma com suporte a internacionalização."
+          ],
+          "technologies": ["React Native", "TypeScript", "i18n", "Figma"]
         },
         "pickngoFrontend": {
-          "position": "Desenvolvedor Front End",
-          "company": "PickNGo | Abril 2024 - Junho 2025",
-          "tasks": {
-            "systemRefactoring": {
-              "title": "Refatoração do Sistema",
-              "description": "Participei da refatoração do sistema principal da empresa ao lado da equipe de front-end, tornando-o mais performático, moderno e intuitivo, com novas funcionalidades e melhor experiência do usuário."
-            },
-            "challengeResolution": {
-              "title": "Resolução de Desafios",
-              "description": "Resolvi desafios técnicos com abordagens criativas e eficientes, contribuindo com soluções inovadoras adotadas como boas práticas pela equipe."
-            },
-            "componentDevelopment": {
-              "title": "Desenvolvimento de Componentes",
-              "description": "Desenvolvi e mantive componentes como formulários dinâmicos, mapas interativos, suporte a múltiplas marcas (whitelabel) e sistema global de notificações (snackbar), com foco em modularidade e usabilidade."
-            },
-            "typescript": {
-              "title": "Tipagem TypeScript",
-              "description": "Criei e mantive types, interfaces e DTOs globais em TypeScript, promovendo consistência entre as camadas da aplicação e reduzindo erros de integração."
-            },
-            "bugFixing": {
-              "title": "Resolução de Bugs",
-              "description": "Atuei na identificação e resolução de bugs, trabalhando em conjunto com a equipe de back-end para garantir a estabilidade do sistema e melhorar a comunicação entre as camadas."
-            },
-            "libraryImplementation": {
-              "title": "Implementação de Bibliotecas",
-              "description": "Pesquisei, testei e implementei bibliotecas que melhor se encaixavam nas necessidades do projeto, focando em performance, usabilidade e manutenibilidade."
-            },
-            "stateManagement": {
-              "title": "Gerenciamento de Estado",
-              "description": "Implementei e mantive o gerenciamento de estado global, garantindo previsibilidade, consistência de dados e facilitando a escalabilidade do sistema."
-            }
-          }
+          "company": "PickNGo",
+          "position": "Desenvolvedor Front-end",
+          "startMonth": 4,
+          "startYear": 2024,
+          "endMonth": 6,
+          "endYear": 2025,
+          "summary": "Modernização do sistema logístico principal.",
+          "highlights": [
+            "Refatoração do sistema principal com Clean Code e TypeScript.",
+            "Implementação de estrutura whitelabel e fluxos complexos."
+          ],
+          "technologies": ["React", "TypeScript", "i18n", "Figma", "Whitelabel", "Mapas"]
         }
       }
     },

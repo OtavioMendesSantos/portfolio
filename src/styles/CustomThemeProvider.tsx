@@ -58,34 +58,34 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
     const customTheme = createTheme({
         palette: { ...defaultTheme.palette },
         typography: {
-            fontFamily: ['"Poppins"', '"Playfair Display SC"'].join(','),
+            fontFamily: ['"Poppins"', 'sans-serif'].join(','),
             h1: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700
             },
             h2: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '1.5rem',
                 fontWeight: 700
             },
             h3: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '1.25rem',
                 fontWeight: 700
             },
             h4: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '1rem',
                 fontWeight: 700
             },
             h5: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '0.875rem',
                 fontWeight: 700
             },
             h6: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '0.75rem',
                 fontWeight: 700
             },
@@ -100,13 +100,13 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
                 fontWeight: 400
             },
             subtitle1: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '1rem',
                 fontWeight: 700,
                 display: 'inline'
             },
             subtitle2: {
-                fontFamily: '"Playfair Display SC", sans-serif',
+                fontFamily: '"Druk Wide", sans-serif',
                 fontSize: '0.875rem',
                 fontWeight: 700,
                 display: 'inline'

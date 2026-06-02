@@ -45,7 +45,7 @@ const Footer = () => {
         <Link href="mailto:dev.otavioms@gmail.com" target="_blank" rel="noreferrer noopen">
           <StyledBox>
             <EmailIcon />
-            <Typography>Gmail</Typography>
+            <Typography>Email</Typography>
           </StyledBox>
         </Link>
         <Link href="https://github.com/OtavioMendesSantos" target="_blank" rel="noreferrer noopen">
