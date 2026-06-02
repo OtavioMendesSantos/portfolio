@@ -6,6 +6,7 @@ import Projects from '../../components/Sections/Projects'
 import Repositories from '../../components/Sections/Repositories'
 import SendMessage from '../../components/Sections/SendMessage'
 import Skills from '../../components/Sections/Skills'
+import TechnologiesCarousel from '../../components/Sections/TechnologiesCarousel'
 import Training from '../../components/Sections/Training'
 import Footer from '../../components/common/Footer'
 import Header from '../../components/common/Header'
@@ -45,6 +46,7 @@ const Home = () => {
             minHeight: '100vh',
           }}
         >
+          <TechnologiesCarousel />
           <Skills className='homeSection' />
           <Experience className='homeSection' />
           <Training className='homeSection' />
