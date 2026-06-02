@@ -8,7 +8,8 @@ import BoxSection from '../common/BoxSection';
 import ImgWithLoading from '../common/ImgWithLoading';
 import CustomModal from '../common/Modal';
 import { StyledTypography as Typography } from '../Styled/StyledComponents';
-import smartImage from '/assets/images/smart.png';
+
+const smartImage = '/assets/images/smart.png';
 
 Chart.register(RadialLinearScale, PointElement, LineElement, Filler, ChartTooltip, Legend);
 
@@ -87,7 +88,6 @@ const Skills = ({ className }: { className?: string }) => {
     ],
   };
 
-  // Opções do gráfico do tipo Radar
   const options: ChartOptions<'radar'> = {
     responsive: true,
     maintainAspectRatio: false,

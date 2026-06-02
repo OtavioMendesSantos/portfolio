@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
 import CustomThemeProvider from '../styles/CustomThemeProvider';
 
 type ThemeContextType = {
@@ -9,18 +9,33 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProviderWrapper: React.FC<{ children: ReactNode }> = ({ children }) => {
-    // Detecta o tema do sistema
-    const getSystemTheme = () =>
-        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const [mode, setModeState] = useState<'light' | 'dark'>('light');
 
-    const [mode, setMode] = useState<'light' | 'dark'>(getSystemTheme());
+    const setMode = useCallback((newMode: 'light' | 'dark') => {
+        setModeState(newMode);
+
+        if (typeof window !== 'undefined') {
+            window.localStorage.setItem('theme', newMode);
+        }
+    }, []);
 
     useEffect(() => {
-        // Listener para mudanças no tema do sistema
+        if (typeof window === 'undefined') return;
+
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const storedMode = window.localStorage.getItem('theme');
+
+        if (storedMode === 'light' || storedMode === 'dark') {
+            setModeState(storedMode);
+        } else {
+            setModeState(mediaQuery.matches ? 'dark' : 'light');
+        }
 
         const handleChange = (e: MediaQueryListEvent) => {
-            setMode(e.matches ? 'dark' : 'light');
+            const currentStoredMode = window.localStorage.getItem('theme');
+            if (currentStoredMode === 'light' || currentStoredMode === 'dark') return;
+
+            setModeState(e.matches ? 'dark' : 'light');
         };
 
         mediaQuery.addEventListener('change', handleChange);

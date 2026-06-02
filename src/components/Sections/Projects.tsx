@@ -8,7 +8,6 @@ import { Box, Button, Card, CardContent, Chip, Container, FormControl, Grid, Inp
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { v4 as uuidv4 } from 'uuid';
 import useResponsive from '../../hooks/useResponsive';
 import { Project } from '../../Interfaces/Project';
 import BoxSection from '../common/BoxSection';
@@ -29,18 +28,18 @@ const Projects = ({ className }: { className?: string }) => {
 
     const projects: Project[] = useMemo(() => ([
         {
-            id: uuidv4(),
+            id: 'clearkanban',
             name: t('sections.projects.items.clearKanban.name'),
-            img: 'assets/images/clearkanban.png',
+            img: '/assets/images/clearkanban.png',
             description: t('sections.projects.items.clearKanban.description'),
             linkProjeto: 'https://clearkanban.com',
             status: 'em_desenvolvimento',
             stacks: ['nodejs', 'typescript', 'react', 'postgresql', 'socketio', 'railway', 'jwt', 'sass', 'redux', 'grafana'],
         },
         {
-            id: uuidv4(),
+            id: 'dogs',
             name: t('sections.projects.items.dogs.name'),
-            img: 'assets/images/dogs.jpg',
+            img: '/assets/images/dogs.jpg',
             description: t('sections.projects.items.dogs.description'),
             linkRepositorio: 'https://github.com/OtavioMendesSantos/Projeto_Autodidata-React/tree/main/React-Origamid/08-Projeto_Final',
             linkProjeto: 'https://dogs-otavio.vercel.app/',
@@ -48,9 +47,9 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['redux', 'react', 'javascript', 'css', 'html']
         },
         {
-            id: uuidv4(),
+            id: 'fantastic-animals',
             name: t('sections.projects.items.fantasticAnimals.name'),
-            img: 'assets/images/animais_fantasticos.jpg',
+            img: '/assets/images/animais_fantasticos.jpg',
             description: t('sections.projects.items.fantasticAnimals.description'),
             linkRepositorio: 'https://github.com/OtavioMendesSantos/Sites_Portifolio/tree/main/projetos/origamid/Animais_Fantasticos',
             linkProjeto: 'https://otaviomendessantos.github.io/Sites_Portifolio/projetos/origamid/Animais_Fantasticos/index.html',
@@ -58,7 +57,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'flex-blog',
             name: t('sections.projects.items.flexBlog.name'),
             img: 'https://otaviomendessantos.github.io/Sites_Portifolio/assets/imgs/projects/screenshot-flexblog.jpg',
             description: t('sections.projects.items.flexBlog.description'),
@@ -68,7 +67,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'pomodoro',
             name: t('sections.projects.items.pomodoro.name'),
             img: '/assets/images/pomodoro.jpg',
             description: t('sections.projects.items.pomodoro.description'),
@@ -78,7 +77,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'pokedex',
             name: t('sections.projects.items.pokedex.name'),
             img: '/assets/images/pokedex.jpg',
             description: t('sections.projects.items.pokedex.description'),
@@ -88,7 +87,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css', 'react'],
         },
         {
-            id: uuidv4(),
+            id: 'to-do-list',
             name: t('sections.projects.items.toDoList.name'),
             img: '/assets/images/to_do_list.png',
             description: t('sections.projects.items.toDoList.description'),
@@ -98,7 +97,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['nextjs', 'react', 'typescript', 'sass'],
         },
         {
-            id: uuidv4(),
+            id: 'tic-tac-toe',
             name: t('sections.projects.items.ticTacToe.name'),
             img: '/assets/images/jogo_da_velha.jpg',
             description: t('sections.projects.items.ticTacToe.description'),
@@ -108,7 +107,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'detona-ralph',
             name: t('sections.projects.items.detonaRalph.name'),
             img: '/assets/images/detona_ralph.jpg',
             description: t('sections.projects.items.detonaRalph.description'),
@@ -118,7 +117,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'memory-game',
             name: t('sections.projects.items.memoryGame.name'),
             img: '/assets/images/jogo_da_memoria.jpg',
             description: t('sections.projects.items.memoryGame.description'),
@@ -128,7 +127,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'virtual-piano',
             name: t('sections.projects.items.virtualPiano.name'),
             img: '/assets/images/piano_virtual.jpg',
             description: t('sections.projects.items.virtualPiano.description'),
@@ -138,7 +137,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'jo-ken-po-yu-gi-oh',
             name: t('sections.projects.items.joKenPoYuGiOh.name'),
             img: '/assets/images/yu-gi-oh.jpg',
             description: t('sections.projects.items.joKenPoYuGiOh.description'),
@@ -148,7 +147,7 @@ const Projects = ({ className }: { className?: string }) => {
             stacks: ['javascript', 'html', 'css'],
         },
         {
-            id: uuidv4(),
+            id: 'breeze',
             name: t('sections.projects.items.breeze.name'),
             description: t('sections.projects.items.breeze.description'),
             linkRepositorio: 'https://github.com/OtavioMendesSantos/Breeze',
