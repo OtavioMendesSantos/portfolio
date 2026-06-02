@@ -1,20 +1,69 @@
 {
   "presentation": {
     "name": "Otávio Mendes Santos",
-    "job": "Front-end Web Developer",
-    "description": "Passionate about technology, I am a junior web developer in constant learning. I am a communicative and collaborative professional who values teamwork and knowledge sharing.",
+    "kicker": "Software engineering and cloud-native architecture",
+    "developerLabel": "Developer",
+    "typingWords": ["Full Stack", "Back-end", "Front-end", "Mobile"],
+    "job": "Full Stack Developer",
+    "description": "Software development focused on backend and high performance. Practical experience creating resilient APIs, data modeling, DevOps practices, and modern interface development.",
     "dominateTechnologies": "Technologies I dominate",
     "contacts": "Contacts",
     "goMainPage": "Go to main page"
   },
   "sections": {
     "skills": {
-      "title": "Skills",
-      "basicKnowledge": "Basic or beginner knowledge",
-      "intermediateKnowledge": "Intermediate knowledge, able to use in small projects",
-      "advancedKnowledge": "Advanced knowledge, specific experience",
-      "expertKnowledge": "Expertise or mastery level",
-      "howEvaluate": "How do I evaluate myself?",
+      "title": "Technical Stack",
+      "kicker": "Technical skills",
+      "headline": "Backend, data, infrastructure, and modern interfaces.",
+      "description": "I work across the full development lifecycle, with a current focus on scalable backend services, API architecture, and production systems operation.",
+      "categories": {
+        "backend": "Backend & APIs",
+        "frontend": "Front-end",
+        "database": "Databases",
+        "devops": "Infrastructure & DevOps"
+      },
+      "cards": {
+        "backend": {
+          "eyebrow": "Backend & APIs",
+          "title": "Scalable services and integrations",
+          "description": "Building APIs, microservices, and communication flows between systems.",
+          "points": [
+            "Building scalable and secure RESTful APIs.",
+            "Designing services focused on availability and concurrency.",
+            "Integrating authentication, real-time events, and external services."
+          ]
+        },
+        "frontend": {
+          "eyebrow": "Front-end & Interfaces",
+          "title": "Web, mobile, and whitelabel products",
+          "description": "Creating and evolving responsive interfaces for digital products.",
+          "points": [
+            "Componentizing screens and flows with maintainability in mind.",
+            "Implementing whitelabel experiences and high-fidelity interfaces.",
+            "Optimizing visual performance across web and mobile applications."
+          ]
+        },
+        "database": {
+          "eyebrow": "Databases & Modeling",
+          "title": "Consistent data and efficient queries",
+          "description": "Modeling, maintaining, and optimizing data for production applications.",
+          "points": [
+            "Modeling entities, relationships, and business rules.",
+            "Optimizing queries and analyzing bottlenecks.",
+            "Organizing persistence to reduce inconsistencies and rework."
+          ]
+        },
+        "infrastructure": {
+          "eyebrow": "Infrastructure & Observability",
+          "title": "Deploy, monitoring, and operation",
+          "description": "Configuring environments, pipelines, and operational visibility.",
+          "points": [
+            "Provisioning environments for development and production.",
+            "Tracking metrics, events, and service health.",
+            "Supporting more predictable, traceable, and secure deploys."
+          ]
+        }
+      },
       "current": "Current",
       "target": "Target",
       "technologies": {
@@ -33,20 +82,11 @@
         "express": "Express",
         "mongodb": "MongoDB",
         "jest": "Jest",
-        "python": "Python"
+        "python": "Python",
+        "queryOptimization": "Query Optimization"
       },
       "legend": "Legend",
-      "seeMore": "See more",
-      "evaluationCriteria": "1. Self-assessment by Specific Criteria",
-      "evaluationCriteriaDescription": "I reflect on my past projects and evaluate my performance based on practical results: <br /> 1-3: Basic or beginner knowledge. <br /> 4-6: Intermediate knowledge, able to apply in small projects. <br /> 7-8: Advanced knowledge, with solid experience. <br /> 9-10: Expertise or mastery level.",
-      "externalFeedback": "2. External Feedback Assessment",
-      "externalFeedbackDescription": "I ask for feedback from colleagues, mentors, or leaders (managers, coworkers, teachers) to evaluate my current skills. This offers an external perspective and balances my self-assessment.",
-      "goals": "3. Short, Medium, and Long-term Goals",
-      "goalsDescription": "Short term (1-3 months): Skills I want to improve soon. <br /> Medium term (6 months - 1 year): Skills that require more practice or learning. <br /> Long term (1-2 years): More complex or advanced level skills.",
-      "smartMethod": "4. SMART Model for Desired Goals",
-      "smartMethodDescription": "Specific: I determine exactly which aspect of the skill I want to improve. <br /> Measurable: How can success be measured? For example, completing a project or obtaining a certification. <br /> Attainable: Is the skill realistic considering my current level and context? <br /> Relevant: How does this skill contribute to my career or personal goals? <br /> Time-bound: How long do I expect to reach this level?",
-      "marketBenchmarking": "5. Market Benchmarking",
-      "marketBenchmarkingDescription": "I research market expectations for the skills I want to develop, adjusting my assessments according to the requirements of my area of expertise."
+      "seeMore": "See more"
     },
     "experience": {
       "title": "Experience",

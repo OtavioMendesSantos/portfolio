@@ -29,6 +29,7 @@ const technologies: Technology[] = [
   { name: 'Git', icon: 'git' },
   { name: 'Railway', icon: 'railway' },
   { name: 'Grafana', icon: 'grafana' },
+  { name: 'Google Cloud Platform', icon: 'googlecloud' },
 ];
 
 const scroll = keyframes`
@@ -48,9 +49,6 @@ const TechnologiesCarousel = ({ className }: { className?: string }) => {
   return (
     <BoxSection title={t('sections.technologies.title')} className={className}>
       <Container sx={{ py: { xs: 3, md: 4 }, px: { xs: 0, sm: 3 } }}>
-        <Typography indicate variant="h1" sx={{ mb: 2 }}>
-          {t('sections.technologies.title')}
-        </Typography>
         <CarouselViewport>
           <CarouselTrack>
             {carouselItems.map((technology, index) => (

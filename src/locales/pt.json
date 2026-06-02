@@ -1,20 +1,69 @@
 {
   "presentation": {
     "name": "Otávio Mendes Santos",
-    "job": "Desenvolvedor Web Front-end",
-    "description": "Apaixonado por tecnologia, sou um desenvolvedor web júnior em constante aprendizado. Sou um profissional comunicativo e colaborativo, que valoriza o trabalho em equipe e a troca de conhecimento.",
+    "kicker": "Engenharia de software e arquitetura cloud-native",
+    "developerLabel": "Desenvolvedor",
+    "typingWords": ["Full Stack", "Back-end", "Front-end", "Mobile"],
+    "job": "Desenvolvedor Full Stack",
+    "description": "Desenvolvimento de software com foco em backend e alta performance. Experiência prática na criação de APIs resilientes, modelagem de dados, práticas de DevOps e desenvolvimento de interfaces modernas.",
     "dominateTechnologies": "Tecnologias que domino",
     "contacts": "Contatos",
     "goMainPage": "Ir para a página principal"
   },
   "sections": {
     "skills": {
-      "title": "Habilidades",
-      "basicKnowledge": "Conhecimento básico ou iniciante",
-      "intermediateKnowledge": "Conhecimento intermediário, capaz de usar em projetos pequenos",
-      "advancedKnowledge": "Conhecimento avançado, experiência específica",
-      "expertKnowledge": "Expertise ou nível de domínio",
-      "howEvaluate": "Como me autoavalio?",
+      "title": "Stack Técnica",
+      "kicker": "Competências técnicas",
+      "headline": "Backend, dados, infraestrutura e interfaces modernas.",
+      "description": "Atuo no ciclo completo de desenvolvimento, com foco atual em serviços backend escaláveis, arquitetura de APIs e operação de sistemas em produção.",
+      "categories": {
+        "backend": "Backend & APIs",
+        "frontend": "Front-end",
+        "database": "Bancos de Dados",
+        "devops": "Infraestrutura & DevOps"
+      },
+      "cards": {
+        "backend": {
+          "eyebrow": "Backend & APIs",
+          "title": "Serviços escaláveis e integrações",
+          "description": "Construção de APIs, microsserviços e fluxos de comunicação entre sistemas.",
+          "points": [
+            "Construção de APIs RESTful escaláveis e seguras.",
+            "Desenho de serviços com foco em disponibilidade e concorrência.",
+            "Integração com autenticação, eventos em tempo real e serviços externos."
+          ]
+        },
+        "frontend": {
+          "eyebrow": "Front-end & Interfaces",
+          "title": "Produtos web, mobile e whitelabel",
+          "description": "Criação e evolução de interfaces responsivas para produtos digitais.",
+          "points": [
+            "Componentização de telas e fluxos com foco em manutenção.",
+            "Implementação de experiências whitelabel e interfaces de alta fidelidade.",
+            "Otimização de performance visual em aplicações web e mobile."
+          ]
+        },
+        "database": {
+          "eyebrow": "Bancos de Dados & Modelagem",
+          "title": "Dados consistentes e consultas eficientes",
+          "description": "Modelagem, manutenção e otimização de dados para aplicações em produção.",
+          "points": [
+            "Modelagem de entidades, relações e regras de negócio.",
+            "Otimização de consultas e análise de gargalos.",
+            "Organização de persistência para reduzir inconsistências e retrabalho."
+          ]
+        },
+        "infrastructure": {
+          "eyebrow": "Infraestrutura & Observabilidade",
+          "title": "Deploy, monitoramento e operação",
+          "description": "Configuração de ambientes, pipelines e visibilidade operacional.",
+          "points": [
+            "Provisionamento de ambientes para desenvolvimento e produção.",
+            "Acompanhamento de métricas, eventos e saúde de serviços.",
+            "Apoio a deploys mais previsíveis, rastreáveis e seguros."
+          ]
+        }
+      },
       "current": "Atual",
       "target": "Meta",
       "technologies": {
@@ -33,20 +82,11 @@
         "express": "Express",
         "mongodb": "MongoDB",
         "jest": "Jest",
-        "python": "Python"
+        "python": "Python",
+        "queryOptimization": "Otimização de Queries"
       },
       "legend": "Legenda",
-      "seeMore": "Ver mais",
-      "evaluationCriteria": "1. Autoavaliação por Critérios Específicos",
-      "evaluationCriteriaDescription": "Reflito sobre meus projetos passados e avalio meu desempenho com base nos resultados práticos: <br /> 1-3: Conhecimento básico ou iniciante. <br /> 4-6: Conhecimento intermediário, capaz de aplicar em projetos pequenos. <br /> 7-8: Conhecimento avançado, com experiência sólida. <br /> 9-10: Expertise ou nível de domínio.",
-      "externalFeedback": "2. Avaliação de Feedback Externo",
-      "externalFeedbackDescription": "Peço feedback a colegas, mentores ou líderes (gerentes, colegas de trabalho, professores) para avaliar minhas habilidades atuais. Isso oferece uma perspectiva externa e equilibra minha autoavaliação.",
-      "goals": "3. Objetivos de Curto, Médio e Longo Prazo",
-      "goalsDescription": "Curto prazo (1-3 meses): Habilidades que desejo melhorar em breve. \n Médio prazo (6 meses - 1 ano): Habilidades que exigem mais prática ou aprendizado. <br /> Longo prazo (1-2 anos): Habilidades mais complexas ou de nível avançado.",
-      "smartMethod": "4. Modelo SMART para Metas Almejadas",
-      "smartMethodDescription": "Specific (Específico): Determino exatamente qual aspecto da habilidade desejo melhorar. <br /> Measurable (Mensurável): Como o sucesso pode ser medido? Por exemplo, concluir um projeto ou obter uma certificação. <br /> Attainable (Atingível): A habilidade é realista considerando meu nível atual e contexto? <br /> Relevant (Relevante): Como essa habilidade contribui para meus objetivos de carreira ou pessoais? <br /> Time-bound (Temporal): Em quanto tempo espero atingir esse nível?",
-      "marketBenchmarking": "5. Benchmarking com o Mercado",
-      "marketBenchmarkingDescription": "Pesquiso as expectativas do mercado para as habilidades que desejo desenvolver, ajustando minhas avaliações de acordo com as exigências da minha área de atuação."
+      "seeMore": "Ver mais"
     },
     "experience": {
       "title": "Experiência",
