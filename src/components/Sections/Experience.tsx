@@ -205,7 +205,7 @@ const Experience = ({ className }: { className?: string }) => {
                                     <Typography variant="caption" sx={{ fontWeight: 800, color: 'primary.main', display: 'block', lineHeight: 1.2 }}>
                                         {calculateDuration(group.minStartDate, group.maxEndDate, i18n.language)}
                                     </Typography>
-                                    <Typography variant="caption" sx={{ opacity: 0.6, fontSize: '0.65rem' }}>
+                                    <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500, fontSize: '0.7rem' }}>
                                         {formatMonthYear(group.minStartDate.getFullYear(), group.minStartDate.getMonth() + 1, i18n.language)} - {group.roles.some(r => r.isCurrent) ? (i18n.language.startsWith('en') ? 'Present' : 'Atualmente') : formatMonthYear(group.maxEndDate.getFullYear(), group.maxEndDate.getMonth() + 1, i18n.language)}
                                     </Typography>
                                 </Box>
@@ -231,14 +231,14 @@ const Experience = ({ className }: { className?: string }) => {
                                                 {role.position}
                                             </Typography>
                                             
-                                            <Typography variant="body2" sx={{ mb: 1.5, opacity: 0.85, lineHeight: 1.5, fontSize: '0.9rem' }}>
+                                            <Typography variant="body2" sx={{ mb: 1.5, color: 'text.primary', opacity: 0.9, lineHeight: 1.5, fontSize: '0.9rem' }}>
                                                 {role.summary}
                                             </Typography>
 
                                             <Box component="ul" sx={{ m: 0, pl: 2, mb: 2 }}>
                                                 {role.highlights.map((highlight, hIdx) => (
                                                     <Box component="li" key={hIdx} sx={{ mb: 0.5 }}>
-                                                        <Typography variant="body2" sx={{ opacity: 0.75, fontSize: '0.85rem' }}>
+                                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem' }}>
                                                             {highlight}
                                                         </Typography>
                                                     </Box>
