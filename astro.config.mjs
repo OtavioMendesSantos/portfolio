@@ -7,7 +7,7 @@ export default defineConfig({
     resolve: {
       alias: {
         "react-transition-group/TransitionGroupContext":
-          "react-transition-group/TransitionGroupContext.js",
+          "react-transition-group/cjs/TransitionGroupContext.js",
       },
     },
     ssr: {
