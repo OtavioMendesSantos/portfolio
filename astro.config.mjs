@@ -5,18 +5,7 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     ssr: {
-      noExternal: [
-        "@mui/material",
-        "@mui/icons-material",
-        "@emotion/react",
-        "@emotion/styled",
-        "@mui/system",
-        "@mui/base",
-        "@mui/utils",
-        "@mui/styled-engine",
-        "@mui/private-theming",
-        "react-transition-group",
-      ],
+      noExternal: ["@mui/material", "@emotion/react", "@emotion/styled"],
     },
     optimizeDeps: {
       exclude: ["react/jsx-dev-runtime", "react/jsx-runtime"],
