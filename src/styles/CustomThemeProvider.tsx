@@ -27,7 +27,7 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
             },
             text: {
                 primary: '#222222',
-                secondary: '#FFFFFF',
+                secondary: '#555555',
             }
         },
         dark: {
@@ -44,7 +44,7 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
             },
             text: {
                 primary: '#FFFFFF',
-                secondary: '#161616',
+                secondary: '#AAAAAA',
             }
         }
     }
@@ -120,13 +120,13 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
                 fontFamily: '"Poppins", sans-serif',
                 fontSize: '0.75rem',
                 fontWeight: 400,
-                color: defaultTheme.palette.grey[400]
+                color: defaultTheme.palette.text.secondary
             },
             overline: {
                 fontFamily: '"Poppins", sans-serif',
                 fontSize: '0.75rem',
                 fontWeight: 700,
-                color: defaultTheme.palette.grey[400]
+                color: defaultTheme.palette.text.secondary
             }
         },
         components: {

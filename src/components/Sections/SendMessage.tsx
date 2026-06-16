@@ -100,7 +100,7 @@ const SendMessage = ({ className }: { className?: string }) => {
         if (formRef.current === null) return
         setLoading(true)
         emailjs.sendForm(serviceID, templateID, formRef.current, userID)
-            .then((_response) => {
+            .then(() => {
                 messageSnackbar.showSuccess(t('sections.contact.form.success'), 6000)
             })
             .catch((err) => {

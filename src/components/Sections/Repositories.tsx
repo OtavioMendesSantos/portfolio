@@ -43,7 +43,7 @@ const Repositories = ({ className }: { className?: string }) => {
             }
         }
         getUserRepositories()
-    }, [])
+    }, [GITHUB_TOKEN])
 
     const handleClick = () => {
         setInView((prev) => prev + maxView)
