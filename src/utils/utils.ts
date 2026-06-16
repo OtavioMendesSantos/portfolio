@@ -58,7 +58,7 @@ export const changeOpacity = (cor: string, opacidade: number) => {
     /^rgba\((\d+),\s*(\d+),\s*(\d+),\s*(0?\.\d+|1(\.0)?)\)$/
   );
   if (match) {
-    const [, r, g, b, _] = match.map(Number);
+    const [, r, g, b] = match.map(Number);
 
     // Retorna a cor RGBA com a nova opacidade
     return `rgba(${r}, ${g}, ${b}, ${opacidade})`;

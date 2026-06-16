@@ -89,8 +89,8 @@ const useSnackbar = (
     ) => {
         if (typeof message === 'object') {
             setMessage(JSON.stringify(message));
-        } else {
-            message && setMessage(message);
+        } else if (message) {
+            setMessage(message);
         }
 
         setSeverity(severity);

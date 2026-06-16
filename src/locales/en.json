@@ -161,6 +161,10 @@
         "name": "Systems Analysis and Development",
         "institution": "SENAC | 2022 - 2024",
         "modalTitle": "Systems Analysis and Development",
+        "types": {
+          "undergraduate": "Undergraduate",
+          "postgraduate": "Postgraduate"
+        },
         "tableHeader": {
           "order": "Order",
           "curriculumUnit": "Curriculum Unit",

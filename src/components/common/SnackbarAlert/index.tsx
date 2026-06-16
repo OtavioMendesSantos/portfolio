@@ -85,7 +85,7 @@ const SnackbarAlert = ({
     setOpen,
     duration = 0,
     severity = 'success',
-    handleClose = (_event: React.SyntheticEvent | Event, _reason: string) => { setOpen(false) },
+    handleClose = () => { setOpen(false) },
     anchorOrigin = { vertical: 'top', horizontal: 'right' },
 }: SnackbarAlertProps): JSX.Element => {
 

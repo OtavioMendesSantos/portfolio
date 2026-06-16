@@ -4,7 +4,7 @@ import {
     TypographyProps as MuiTypographyProps,
     Card
 } from "@mui/material";
-import { applyOpacity } from "../../utils/utils";
+import { handleOpacityColor } from "../../utils/utils";
 
 interface CustomTypographyProps extends MuiTypographyProps {
     indicate?: boolean;
@@ -37,7 +37,7 @@ export const StyledTypography = styled(Typography, {
 }))
 
 export const StyledCard = styled(Card)(({ theme }) => ({
-    backgroundColor: applyOpacity(theme.palette.primary.main, 0),
+    backgroundColor: handleOpacityColor(theme.palette.primary.main, 0),
     backdropFilter: 'blur(1px)',
     flex: '1 0 400px',
     minHeight: '350px',

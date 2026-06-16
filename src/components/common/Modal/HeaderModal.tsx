@@ -3,7 +3,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 interface HeaderModalProps {
     title: string
-    onClose: any,
+    onClose: () => void,
 }
 
 const HeaderModal = ({ title, onClose }: HeaderModalProps) => {

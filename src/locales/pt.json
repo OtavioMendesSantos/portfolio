@@ -161,6 +161,10 @@
         "name": "Análise e Desenvolvimento de Sistemas",
         "institution": "SENAC | 2022 - 2024",
         "modalTitle": "Análise e Desenvolvimento de Sistemas",
+        "types": {
+          "undergraduate": "Graduação",
+          "postgraduate": "Pós-graduação"
+        },
         "tableHeader": {
           "order": "Ordem",
           "curriculumUnit": "Unidade Curricular",

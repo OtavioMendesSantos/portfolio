@@ -387,7 +387,6 @@ const Projects = ({ className }: { className?: string }) => {
                                                                         width: isMobile ? '80%' : '100%',
                                                                         margin: '0 auto',
                                                                     },
-
                                                                 }}
                                                             />
                                                         </Grid>
@@ -486,7 +485,7 @@ const Projects = ({ className }: { className?: string }) => {
     )
 }
 
-const StyledContainer = styled(Container)(({ }) => ({
+const StyledContainer = styled(Container)(() => ({
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'row',

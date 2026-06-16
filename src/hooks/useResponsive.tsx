@@ -18,7 +18,7 @@ const useResponsive = (): { isMobile: boolean; isDesktop: boolean } => {
         }
         handleResize()
         return () => window.removeEventListener('resize', handleResize)
-    }, [])
+    }, [theme.breakpoints.values.md])
     return {
         isMobile,
         isDesktop,
