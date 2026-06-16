@@ -13,9 +13,14 @@
     "description": "Software development focused on backend and high performance. Practical experience creating resilient APIs, data modeling, DevOps practices, and modern interface development.",
     "dominateTechnologies": "Technologies I dominate",
     "contacts": "Contacts",
+    "aboutMe": "About me",
+    "downloadCV": "Download CV",
     "goMainPage": "Go to main page"
   },
   "sections": {
+    "technologies": {
+      "title": "Technologies"
+    },
     "skills": {
       "title": "Technical Stack",
       "kicker": "Technical skills",

@@ -13,9 +13,14 @@
     "description": "Desenvolvimento de software com foco em backend e alta performance. Experiência prática na criação de APIs resilientes, modelagem de dados, práticas de DevOps e desenvolvimento de interfaces modernas.",
     "dominateTechnologies": "Tecnologias que domino",
     "contacts": "Contatos",
+    "aboutMe": "Sobre mim",
+    "downloadCV": "Baixar CV",
     "goMainPage": "Ir para a página principal"
   },
   "sections": {
+    "technologies": {
+      "title": "Tecnologias"
+    },
     "skills": {
       "title": "Stack Técnica",
       "kicker": "Competências técnicas",
