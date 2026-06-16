@@ -3,6 +3,7 @@ import {
   Box,
   CardContent,
   Container,
+  Divider,
   Grid,
   Paper,
   Stack,
@@ -18,7 +19,7 @@ import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import BoxSection from "../common/BoxSection";
-import Carrousel from "../common/Carrousel";
+import Carousel from "../common/Carousel";
 import ImgWithLoading from "../common/ImgWithLoading";
 import CustomModal from "../common/Modal";
 import {
@@ -179,7 +180,9 @@ const Training = ({ className }: { className?: string }) => {
         organization: "Origamid",
         src: "/assets/images/certificates/react-origamid.png",
         hours: 36,
-        description: t("sections.training.certificates.items.react.description"),
+        description: t(
+          "sections.training.certificates.items.react.description",
+        ),
       },
       {
         name: t("sections.training.certificates.items.javascript.title"),
@@ -200,10 +203,12 @@ const Training = ({ className }: { className?: string }) => {
         ),
       },
       {
-        name: t("sections.training.certificates.items.reactWithTypeScript.title"),
+        name: t(
+          "sections.training.certificates.items.reactWithTypeScript.title",
+        ),
         organization: "Origamid",
         src: "/assets/images/certificates/react_typescript-origamid.jpg",
-        hours: 22,
+        hours: 10,
         description: t(
           "sections.training.certificates.items.reactWithTypeScript.description",
         ),
@@ -261,22 +266,63 @@ const Training = ({ className }: { className?: string }) => {
     setModalImgAlt("");
   };
 
-  const carouselStyles: { [key: string]: React.CSSProperties } = {
-    slide: {
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      opacity: 0,
-      visibility: "hidden",
-      transition: "opacity 0.3s ease",
-      pointerEvents: "none",
-    },
-    activeSlide: {
-      opacity: 1,
-      visibility: "visible",
-      pointerEvents: "auto",
-    },
-  };
+  const CertificateCard = ({ item }: { item: Certificate }) => (
+    <Grid
+      container
+      spacing={4}
+      sx={{ alignItems: "center", px: { xs: 2, md: 4 } }}
+    >
+      <Grid size={{ xs: 12, md: 6 }}>
+        <Box
+          sx={{
+            borderRadius: "8px",
+            overflow: "hidden",
+            boxShadow: (theme) => theme.shadows[10],
+            transition: "transform 0.3s ease",
+            "&:hover": { transform: "scale(1.02)" },
+          }}
+        >
+          <ImgWithLoading
+            src={item.src}
+            alt={item.name}
+            boxProps={{
+              sx: { cursor: "pointer", width: "100%", aspectRatio: "16/11" },
+            }}
+            imgProps={{
+              onClick: () => handleImageClick(item.src, item.name),
+            }}
+          />
+        </Box>
+      </Grid>
+      <Grid size={{ xs: 12, md: 6 }}>
+        <Stack spacing={2} sx={{ textAlign: { xs: "center", md: "left" } }}>
+          <Typography
+            variant="h3"
+            sx={{ color: "primary.main", fontWeight: "bold" }}
+          >
+            {item.name}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            sx={{ opacity: 0.9, fontWeight: "medium" }}
+          >
+            {item.organization} • {item.hours}h
+          </Typography>
+          <Divider
+            sx={{
+              width: { xs: "50px", md: "80px" },
+              mx: { xs: "auto", md: 0 },
+              borderWidth: 2,
+              borderColor: "primary.main",
+            }}
+          />
+          <Typography variant="body1" sx={{ lineHeight: 1.7, opacity: 0.8 }}>
+            {item.description}
+          </Typography>
+        </Stack>
+      </Grid>
+    </Grid>
+  );
 
   return (
     <BoxSection title={t("sections.training.title")} className={className}>
@@ -284,9 +330,9 @@ const Training = ({ className }: { className?: string }) => {
         {t("sections.training.title")}
       </Typography>
       <Container>
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           {graduations.map((grad, index) => (
-            <Grid size={{ xs: 12 }} key={index}>
+            <Grid size={{ xs: 12, md: 6 }} key={index}>
               <motion.div
                 variants={itemVariants}
                 initial="hidden"
@@ -294,18 +340,16 @@ const Training = ({ className }: { className?: string }) => {
                 viewport={{ once: true }}
                 style={{ width: "100%" }}
               >
-                <StyledCard sx={{ minHeight: "auto" }}>
+                <StyledCard
+                  sx={{ minHeight: "auto", transition: "all 0.3s ease" }}
+                >
                   <CardContent sx={{ p: 3 }}>
                     <Tooltip
                       placement="top"
                       arrow
                       title={
                         <Box
-                          sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 1,
-                          }}
+                          sx={{ display: "flex", alignItems: "center", gap: 1 }}
                         >
                           {t("sections.training.viewSubjects")}{" "}
                           <ArrowOutwardRoundedIcon sx={{ fontSize: 12 }} />
@@ -315,27 +359,38 @@ const Training = ({ className }: { className?: string }) => {
                       <Typography
                         variant="h2"
                         sx={{
-                          fontSize: "1.5rem",
+                          fontSize: "1.25rem",
                           fontWeight: 800,
                           cursor: "pointer",
+                          mb: 1,
                         }}
                         onClick={() => handleOpen(grad)}
                       >
                         {grad.name}
                       </Typography>
                     </Tooltip>
-                    <Stack sx={{ gap: 1, mt: 2 }}>
+                    <Stack spacing={0.5}>
                       <Typography
                         variant="h3"
                         sx={{
-                          fontSize: "1.1rem",
+                          fontSize: "1rem",
                           fontWeight: 700,
                           color: "primary.light",
                         }}
                       >
-                        {grad.institution} • {grad.type}
+                        {grad.institution}
                       </Typography>
-                      <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          textTransform: "uppercase",
+                          letterSpacing: 1,
+                          opacity: 0.7,
+                        }}
+                      >
+                        {grad.type}
+                      </Typography>
+                      <Typography variant="body2" sx={{ mt: 1, opacity: 0.8 }}>
                         {grad.period}
                       </Typography>
                     </Stack>
@@ -346,88 +401,16 @@ const Training = ({ className }: { className?: string }) => {
           ))}
         </Grid>
 
-        <Typography variant="h2" sx={{ my: 8 }}>
+        <Typography variant="h2" sx={{ m: 2 }}>
           {t("sections.training.coursesAndCertificates")}
         </Typography>
 
-        <Carrousel
+        <Carousel
           items={certificates}
-          renderImage={(certificate, index, isActive, prevAnimation) => (
-            <motion.div
-              key={index}
-              style={{
-                ...carouselStyles.slide,
-                ...(isActive ? carouselStyles.activeSlide : {}),
-              }}
-              animate={
-                isActive
-                  ? {
-                      opacity: 1,
-                      x: 0,
-                      visibility: "visible",
-                    }
-                  : {
-                      opacity: 0,
-                      x: prevAnimation === "right" ? -100 : 100,
-                      visibility: "hidden",
-                    }
-              }
-              transition={{ duration: 0.3 }}
-            >
-              <ImgWithLoading
-                src={certificate.src}
-                alt={certificate.name}
-                boxProps={{
-                  sx: {
-                    borderRadius: "4px",
-                    overflow: "hidden",
-                    cursor: "pointer",
-                    width: "100%",
-                    height: "100%",
-                  },
-                }}
-                imgProps={{
-                  onClick: () => handleImageClick(certificate.src, certificate.name),
-                }}
-              />
-            </motion.div>
-          )}
-          renderDescription={(certificate, index, isActive) => (
-            <Box
-              key={index}
-              sx={{
-                flex: "1 1 auto",
-                display: "flex",
-                height: "100%",
-                flexDirection: "column",
-                position: "absolute",
-                transition: "opacity 0.3s ease",
-                opacity: isActive ? 1 : 0,
-                visibility: isActive ? "visible" : "hidden",
-              }}
-            >
-              <Typography align="center" variant="h3">
-                {certificate.name}
-              </Typography>
-              <Typography variant="subtitle1" align="center" sx={{ mb: 1 }}>
-                {certificate.organization} | {certificate.hours} horas
-              </Typography>
-              <Box
-                sx={{
-                  flex: 1,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Typography align="center" variant="body1" sx={{ mb: 2 }}>
-                  {certificate.description}
-                </Typography>
-              </Box>
-            </Box>
-          )}
+          renderItem={(certificate) => <CertificateCard item={certificate} />}
         />
       </Container>
+
       <CustomModal
         open={openModalGraduation}
         onClose={handleClose}
@@ -437,22 +420,22 @@ const Training = ({ className }: { className?: string }) => {
           selectedGraduation?.name || t("sections.training.college.modalTitle")
         }
       >
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{ boxShadow: "none" }}>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <Typography variant="h6">
+                  <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
                     {t("sections.training.college.tableHeader.order")}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography variant="h6">
+                  <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
                     {t("sections.training.college.tableHeader.curriculumUnit")}
                   </Typography>
                 </TableCell>
-                <TableCell>
-                  <Typography variant="h6">
+                <TableCell align="right">
+                  <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
                     {t("sections.training.college.tableHeader.workload")}
                   </Typography>
                 </TableCell>
@@ -462,24 +445,35 @@ const Training = ({ className }: { className?: string }) => {
               {selectedGraduation?.curriculum.map((item) => (
                 <TableRow key={item.ordem} hover>
                   <TableCell>{item.ordem}</TableCell>
-                  <TableCell>{item.unidadeCurricular}</TableCell>
-                  <TableCell>{item.ch}</TableCell>
+                  <TableCell sx={{ fontWeight: "medium" }}>
+                    {item.unidadeCurricular}
+                  </TableCell>
+                  <TableCell align="right">{item.ch}h</TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </TableContainer>
       </CustomModal>
+
       <CustomModal
         open={modalImgOpen}
         onClose={handleModalImgClose}
         title={t("sections.training.certificateModal.title")}
       >
-        <ImgWithLoading
-          alt={modalImgAlt}
-          src={modalImg}
-          imgProps={{ style: { borderRadius: "4px", maxWidth: "100%" } }}
-        />
+        <Box sx={{ p: 1 }}>
+          <ImgWithLoading
+            alt={modalImgAlt}
+            src={modalImg}
+            imgProps={{
+              style: {
+                borderRadius: "8px",
+                maxWidth: "100%",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+              },
+            }}
+          />
+        </Box>
       </CustomModal>
     </BoxSection>
   );
