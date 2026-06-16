@@ -4,12 +4,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   integrations: [react()],
   vite: {
-    resolve: {
-      alias: {
-        "react-transition-group/TransitionGroupContext":
-          "react-transition-group/cjs/TransitionGroupContext.js",
-      },
-    },
     ssr: {
       noExternal: [
         "@mui/material",
@@ -19,6 +13,8 @@ export default defineConfig({
         "@mui/system",
         "@mui/base",
         "@mui/utils",
+        "@mui/styled-engine",
+        "@mui/private-theming",
         "react-transition-group",
       ],
     },
