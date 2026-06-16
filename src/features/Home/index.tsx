@@ -29,7 +29,7 @@ const Home = () => {
         component="main"
         sx={{
           backgroundColor: theme.palette.background.paper,
-          backgroundImage: `radial-gradient(${handleOpacityColor(theme.palette.getContrastText(theme.palette.background.paper), 0.2)} 2px, transparent 0)`,
+          backgroundImage: `radial-gradient(${handleOpacityColor(theme.palette.getContrastText(theme.palette.background.paper), 0.125)} 2px, transparent 0)`,
           backgroundSize: "40px 40px",
           backgroundPosition: "-5px -5px",
         }}
