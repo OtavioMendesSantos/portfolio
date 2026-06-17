@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Experience from "../../components/Sections/Experience";
 import Presentation from "../../components/Sections/Presentation";
 import Projects from "../../components/Sections/Projects";
-import SendMessage from "../../components/Sections/SendMessage";
+import Contact from "../../components/Sections/Contact";
 import Skills from "../../components/Sections/Skills";
 import TechnologiesCarousel from "../../components/Sections/TechnologiesCarousel";
 import Training from "../../components/Sections/Training";
@@ -50,7 +50,7 @@ const Home = () => {
           <Experience className="homeSection" />
           <Training className="homeSection" />
           <Projects className="homeSection" />
-          <SendMessage className="homeSection" />
+          <Contact className="homeSection" />
           {/* <Repositories className='homeSection' /> */}
         </Container>
         <Footer />

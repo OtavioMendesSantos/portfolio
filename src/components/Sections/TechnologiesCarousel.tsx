@@ -25,6 +25,7 @@ const technologies: Technology[] = [
   { name: "Node.js", icon: "nodejs" },
   { name: "Nest.js", icon: "nestjs" },
   { name: "Express", icon: "express" },
+  { name: "Docker", icon: "docker" },
   { name: "MongoDB", icon: "mongodb" },
   { name: "PostgreSQL", icon: "postgresql" },
   { name: "Socket.IO", icon: "socketio" },
