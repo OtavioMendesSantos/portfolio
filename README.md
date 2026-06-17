@@ -6,20 +6,17 @@ Brasília, Distrito Federal, Brasil
 ## Contato
 
 * **Telefone:** (61) 99915-0535
-* **Email:** <otaviomendessantos2019@gmail.com>
+* **Email:** <dev.otavioms@gmail.com>
 * **LinkedIn:** [linkedin.com/in/otaviomendessantos](https://www.linkedin.com/in/otaviomendessantos)
 * **Portfólio:** [otaviodev.vercel.app](https://otaviodev.vercel.app/)
 
 ## Resumo Profissional
 
-Desenvolvedor Full Stack com foco na entrega de software de alta performance e no desenho de arquiteturas escaláveis. Graduado em Análise e Desenvolvimento de Sistemas e pós-graduando em Data Science e Inteligência Artificial (Senac DF). Atuando profissionalmente desde 2024, possuo experiência prática no ciclo de vida de desenvolvimento ponta a ponta, englobando frontend, backend, mobile e infraestrutura.
-
-Meu histórico inclui a concepção e manutenção de soluções tecnológicas para startups, fintechs, saas e clientes independentes. Possuo domínio técnico consolidado no ecossistema JavaScript/TypeScript, com forte atuação em Node.js e PostgreSQL. No cenário atual, direciono meu desenvolvimento e estudos para a construção de serviços backend de alta concorrência utilizando Go (Golang).
-
+Desenvolvedor Full Stack especializado nos ecossistemas JavaScript/TypeScript (Node.js, React) e Go. Possuo experiência no desenvolvimento ponta a ponta de plataformas SaaS, além de projetos para startups e fintechs. Graduado em Análise e Desenvolvimento de Sistemas e pós-graduando em Data Science e Inteligência Artificial (Senac DF).
 ## Competências Técnicas
 
 * **Back-end:** Node.js, Express, NestJS, Go (Golang)
-* **Front-end:** React, Vue.js, TypeScript, JavaScript, Redux
+* **Front-end:** React, Next.js, Vue.js, TypeScript, JavaScript, Redux
 * **Bancos de Dados:** PostgreSQL, MongoDB, NoSQL
 * **Engenharia e Infraestrutura:** Integração e design de APIs REST, Docker, Linux, Testes Unitários (Jest), Clean Code, performance de interfaces, práticas de DevOps, Modelagem de dados, Inteligência Artificial, Grafana e Prometheus
 
@@ -41,8 +38,8 @@ Meu histórico inclui a concepção e manutenção de soluções tecnológicas p
 **Desenvolvedor Full-stack**
 *Dezembro de 2025 – Maio de 2026 (6 meses)*
 
-* **Sistemas de Alta Performance:** Desenvolvo e mantenho microsserviços de alta disponibilidade em Go (Golang), otimizando o backend para suportar cargas superiores a 1000 ops/s.
-* **Infraestrutura Cloud-Native:** Configurei e gerenciei ambientes no Google Cloud Platform (GCP) utilizando Cloud Run, Artifact Registry, Cloud Secrets e instâncias de VM, garantindo escalabilidade serverless e segurança.
+* **Sistemas de Alta Performance:** Desenvolvi e mantive microsserviços de alta disponibilidade em Go (Golang), otimizando o backend para suportar cargas superiores a 1000 ops/s.
+* **Infraestrutura Cloud-Native:** Configurei e gerenciei ambientes no Google Cloud Platform (GCP) utilizando Cloud Run, Artifact Registry, Cloud Secrets e instâncias de VM, garantindo escalabilidade serverless e segurança .
 * **Observabilidade e Monitoramento:** Implementei dashboards de observabilidade no Grafana, utilizando PostgreSQL e Prometheus como fonte de dados e integração com GitHub Webhooks para monitoramento de eventos.
 * **Gestão de Dados e Ambientes:** Configurei e administrei clusters no MongoDB Atlas, sendo responsável pelo provisionamento e manutenção de ambientes de desenvolvimento e produção.
 
@@ -68,9 +65,9 @@ Meu histórico inclui a concepção e manutenção de soluções tecnológicas p
 
 ### Clear Kanban
 
-* Plataforma para gerenciamento de demandas e atividades, projetadapara otimizar o fluxo de trabalho em equipes veja em: [clearkanban.com.br](https://clearkanban.com).
+* Plataforma para gerenciamento de demandas e atividades através da metodologia kanban, projetada para otimizar o fluxo de trabalho em equipes veja em: [clearkanban.com.br](https://clearkanban.com.br).
 * Destaques: Integração em tempo real com Socket.IO, autenticação segura com JWT e interface responsiva.
-* Tecnologias: React, Node.js, TypeScript, PostgreSQL, Socket.IO, JWT, SASS, Redux, Express, Zod, Railway e Vercel.
+* Tecnologias: React, Node.js, Nest.js, TypeScript, PostgreSQL, Socket.IO, JWT, SASS, Redux, Express, Zod, Railway e Vercel.
 
 ## Educação
 
@@ -81,8 +78,7 @@ Meu histórico inclui a concepção e manutenção de soluções tecnológicas p
 
 ### Senai Taguatinga
 
-* **Capacitação, Administrador de Banco de Dados** (Outubro de 2023 – Dezembro de 203)
-2
+* **Capacitação, Administrador de Banco de Dados** (Outubro de 2023 – Dezembro de 2023)
 ## Certificações e Idiomas
 
 * **Certificações:** Administrador de banco de dados, CSS Flexbox, JavaScript Completo ES6, React Completo, MongoDB Schema Design Patterns and Anti-patterns Skill Badge.

@@ -32,7 +32,7 @@ const Projects = ({ className }: { className?: string }) => {
             name: t('sections.projects.items.clearKanban.name'),
             img: '/assets/images/clearkanban.png',
             description: t('sections.projects.items.clearKanban.description'),
-            linkProjeto: 'https://clearkanban.com',
+            linkProjeto: 'https://clearkanban.com.br',
             status: 'em_desenvolvimento',
             stacks: ['nodejs', 'typescript', 'react', 'postgresql', 'socketio', 'railway', 'jwt', 'sass', 'redux', 'grafana'],
         },
