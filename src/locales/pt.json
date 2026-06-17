@@ -281,24 +281,13 @@
     },
     "contact": {
       "title": "Fale Comigo",
-      "form": {
-        "name": {
-          "label": "Nome",
-          "placeholder": "Nome",
-          "error": "O nome deve ter pelo menos 3 letras."
-        },
-        "email": {
-          "label": "Email",
-          "placeholder": "Email",
-          "error": "Email inválido"
-        },
-        "message": {
-          "label": "Mensagem",
-          "placeholder": "Mensagem"
-        },
-        "button": "Enviar",
-        "success": "Mensagem enviada com sucesso!",
-        "error": "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde."
+      "headline": "Vamos construir algo incrível juntos?",
+      "description": "Se você tem um desafio técnico, uma ideia de projeto ou apenas quer bater um papo sobre tecnologia, sinta-se à vontade para entrar em contato através dos canais abaixo.",
+      "buttons": {
+        "linkedin": "Conectar no LinkedIn",
+        "email": "Enviar um E-mail",
+        "github": "Ver GitHub",
+        "whatsapp": "Mensagem no WhatsApp"
       }
     },
     "repositories": {
