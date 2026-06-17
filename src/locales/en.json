@@ -3,12 +3,7 @@
     "name": "Otávio Mendes Santos",
     "kicker": "Software engineering and cloud-native architecture",
     "developerLabel": "Developer",
-    "typingWords": [
-      "Full Stack",
-      "Back-end",
-      "Front-end",
-      "Mobile"
-    ],
+    "typingWords": ["Full Stack", "Back-end", "Front-end", "Mobile"],
     "job": "Full Stack Developer",
     "description": "Software development focused on backend and high performance. Practical experience creating resilient APIs, data modeling, DevOps practices, and modern interface development.",
     "dominateTechnologies": "Technologies I dominate",
@@ -113,7 +108,16 @@
             "Development of RESTful APIs, external integrations, and real-time communication.",
             "Refactoring, bug fixing, and performance optimization."
           ],
-          "technologies": ["React", "TypeScript", "Node.js", "Express", "NestJS", "PostgreSQL", "WebSockets", "WordPress"]
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "NestJS",
+            "PostgreSQL",
+            "WebSockets",
+            "WordPress"
+          ]
         },
         "areopagus": {
           "company": "Areopagus Io",
@@ -128,7 +132,17 @@
             "GCP environment configuration focusing on scalability and security.",
             "Implementation of observability dashboards and monitoring with Grafana, Prometheus, and PostgreSQL."
           ],
-          "technologies": ["Go", "GCP", "Cloud Run", "Artifact Registry", "Cloud Secrets", "Grafana", "Prometheus", "PostgreSQL", "MongoDB Atlas"]
+          "technologies": [
+            "Go",
+            "GCP",
+            "Cloud Run",
+            "Artifact Registry",
+            "Cloud Secrets",
+            "Grafana",
+            "Prometheus",
+            "PostgreSQL",
+            "MongoDB Atlas"
+          ]
         },
         "pickngoMobile": {
           "company": "PickNGo",
@@ -155,7 +169,14 @@
             "Main system refactoring with Clean Code and TypeScript.",
             "Implementation of whitelabel structure and complex flows."
           ],
-          "technologies": ["React", "TypeScript", "i18n", "Figma", "Whitelabel", "Maps"]
+          "technologies": [
+            "React",
+            "TypeScript",
+            "i18n",
+            "Figma",
+            "Whitelabel",
+            "Maps"
+          ]
         }
       }
     },
@@ -241,55 +262,19 @@
       "items": {
         "clearKanban": {
           "name": "Clear Kanban",
-          "description": "A Kanban application designed to efficiently and collaboratively manage demands. It offers features such as user authentication, email password recovery, and real-time communication using WebSockets, ensuring instant updates and a smooth user experience."
+          "description": "Demand management SaaS based on the Kanban methodology. Focused on collaboration, it integrates real-time communication via WebSockets for instant updates and secure authentication flows, ensuring a seamless experience."
         },
-        "dogs": {
-          "name": "Dogs - Social Network for Dogs",
-          "description": "Social Network for Dogs. Complete with comments, posts, authentication, etc."
+        "clinicadobomsenso": {
+          "name": "Clínica do Bom Senso",
+          "description": "SaaS for managing therapeutic practices. The system manages the complete care cycle, from appointment orchestration to financial reconciliation, ensuring data security and service availability."
         },
-        "fantasticAnimals": {
-          "name": "Fantastic Animals",
-          "description": "Website with functionalities made in JavaScript"
+        "baseclinica": {
+          "name": "Base Clínica",
+          "description": "Management platform designed for psychology school clinics. The system implements access control and specific permission flows for different actors (patients, students, and supervisors), centralizing the administration of medical records and clinical appointments."
         },
-        "flexBlog": {
-          "name": "FlexBlog",
-          "description": "Website created to explore flexbox display properties."
-        },
-        "pomodoro": {
-          "name": "Pomodoro",
-          "description": "Pomodoro website for studies, with task list, sound alerts and interactive menu."
-        },
-        "pokedex": {
-          "name": "Pokédex",
-          "description": "Pokédex with listing of Pokémon via pokeAPI."
-        },
-        "toDoList": {
-          "name": "To Do List",
-          "description": "Basic To Do List, with a task list and add and remove buttons."
-        },
-        "ticTacToe": {
-          "name": "Tic-Tac-Toe",
-          "description": "Tic-tac-toe, Player vs Computer."
-        },
-        "detonaRalph": {
-          "name": "Wreck-It Ralph Game",
-          "description": "Whack-a-mole game in the Wreck-It Ralph theme (Need to add responsiveness)."
-        },
-        "memoryGame": {
-          "name": "Memory Game",
-          "description": "Memory game with emojis (Need to add responsiveness)."
-        },
-        "pianoVirtual": {
-          "name": "Virtual Piano",
-          "description": "Virtual Piano (Need to add responsiveness)."
-        },
-        "joKenPoYuGiOh": {
-          "name": "Rock-Paper-Scissors Yu-Gi-Oh Game",
-          "description": "Rock-Paper-Scissors game with Yu-Gi-Oh theme (Need to add responsiveness)."
-        },
-        "breeze": {
-          "name": "Breeze",
-          "description": "Mobile app for weather forecast - Studying React Native and Expo."
+        "hirely": {
+          "name": "Hirely",
+          "description": "Management platform designed for recruitment and hiring companies."
         }
       }
     },
