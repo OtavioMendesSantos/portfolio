@@ -41,7 +41,7 @@ const Contact = ({ className }: { className?: string }) => {
           flexDirection: "column",
           alignItems: "flex-start",
           textAlign: "left",
-          pb: 2,
+          my: { xs: 5, md: 20 },
         }}
       >
         <Stack
