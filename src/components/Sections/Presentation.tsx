@@ -54,15 +54,14 @@ const Presentation = ({ className }: { className?: string }) => {
   return (
     <BoxSection
       sx={{
-        minHeight: "calc(100vh - 60px)",
+        height: "calc(100vh - 60px)",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         overflow: "hidden",
         bgcolor: "background.default",
         px: { xs: 2, md: 3 },
-        py: { xs: 4, md: 6 },
       }}
       title={t("presentation.aboutMe")}
       className={className}
@@ -71,11 +70,10 @@ const Presentation = ({ className }: { className?: string }) => {
         container
         sx={{
           width: "100%",
-          minHeight: "calc(100vh - 120px)",
+          flex: 1,
           maxWidth: "1180px",
           alignItems: "center",
           justifyContent: "center",
-          py: { xs: 4, md: 0 },
         }}
       >
         <motion.div

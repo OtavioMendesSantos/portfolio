@@ -102,11 +102,12 @@
           "startMonth": 6,
           "startYear": 2025,
           "isCurrent": true,
-          "summary": "Desenvolvimento end-to-end para clientes independentes, cobrindo levantamento, arquitetura, implementação, integrações e deploy.",
+          "summary": "Desenvolvimento end-to-end para clientes independentes, cobrindo levantamento, arquitetura, implementação, integrações, deploy e manutenção.",
           "highlights": [
             "Construção de interfaces responsivas e sistemas web/mobile.",
-            "Desenvolvimento de APIs RESTful, integrações externas e comunicação em tempo real.",
-            "Refatoração, correção de bugs e otimização de performance."
+            "Desenvolvimento de APIs RESTful, incluindo comunicação em tempo real via WebSockets.",
+            "Integração de ecossistemas externos, incluindo gateways de pagamento, WhatsApp API da Meta.",
+            "Refatoração, correção de bugs, otimização de performance e desenvolvimento customizado em WordPress."
           ],
           "technologies": [
             "React",
@@ -114,8 +115,10 @@
             "Node.js",
             "Express",
             "NestJS",
+            "Prisma",
             "PostgreSQL",
             "WebSockets",
+            "Tailwind CSS",
             "WordPress"
           ]
         },
@@ -126,21 +129,22 @@
           "startYear": 2025,
           "endMonth": 5,
           "endYear": 2026,
-          "summary": "Atuação em backend de alta performance, infraestrutura cloud-native e observabilidade.",
+          "summary": "Engenharia de backend de alta disponibilidade, infraestrutura cloud-native e observabilidade.",
           "highlights": [
             "Desenvolvimento de microsserviços em Go para cargas superiores a 1000 ops/s.",
             "Configuração de ambientes GCP com foco em escalabilidade e segurança.",
-            "Implementação de dashboards e monitoramento com Grafana, Prometheus e PostgreSQL."
+            "Implementação de dashboards e monitoramento com Grafana e Prometheus, integrando PostgreSQL e GitHub Webhooks.",
+            "Administração e configuração de clusters de desenvolvimento e produção no MongoDB Atlas."
           ],
           "technologies": [
             "Go",
             "GCP",
             "Cloud Run",
             "Artifact Registry",
-            "Cloud Secrets",
             "Grafana",
             "Prometheus",
             "PostgreSQL",
+            "MongoDB",
             "MongoDB Atlas"
           ]
         },
@@ -151,11 +155,18 @@
           "startYear": 2025,
           "endMonth": 6,
           "endYear": 2025,
-          "summary": "Refatoração do aplicativo mobile para entregadores.",
+          "summary": "Refatoração e otimização de performance do aplicativo mobile voltado para a operação de entregadores.",
           "highlights": [
-            "Construção de interfaces mobile fiéis ao Figma com suporte a internacionalização."
+            "Construção de interfaces mobile fiéis ao Figma.",
+            "Desenvolvimento e manutenção de sistema de internacionalização (i18n) para suporte a múltiplos idiomas."
           ],
-          "technologies": ["React Native", "TypeScript", "i18n", "Figma"]
+          "technologies": [
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "Figma",
+            "i18n"
+          ]
         },
         "pickngoFrontend": {
           "company": "PickNGo",
@@ -164,18 +175,20 @@
           "startYear": 2024,
           "endMonth": 6,
           "endYear": 2025,
-          "summary": "Modernização do sistema logístico principal.",
+          "summary": "Modernização e sustentação do sistema logístico principal, focando em confiabilidade e flexibilidade arquitetural.",
           "highlights": [
-            "Refatoração do sistema principal com Clean Code e TypeScript.",
-            "Implementação de estrutura whitelabel e fluxos complexos."
+            "Refatoração do sistema core aplicando princípios de Clean Code e tipagem estrita com TypeScript.",
+            "Implementação de mapas interativos em tempo real, gestão de horários e formulários dinâmicos complexos.",
+            "Estruturação de gerenciamento de estado global para garantir persistência e previsibilidade em fluxos críticos.",
+            "Desenvolvimento e manutenção de estrutura whitelabel."
           ],
           "technologies": [
             "React",
             "TypeScript",
-            "i18n",
+            "Redux",
             "Figma",
             "Whitelabel",
-            "Mapas"
+            "Mapbox"
           ]
         }
       }

@@ -102,11 +102,12 @@
           "startMonth": 6,
           "startYear": 2025,
           "isCurrent": true,
-          "summary": "End-to-end development for independent clients, covering requirements gathering, architecture, implementation, integrations, and deployment.",
+          "summary": "End-to-end development for independent clients, covering requirements gathering, architecture, implementation, integrations, deployment, and maintenance.",
           "highlights": [
-            "Building responsive interfaces and web/mobile systems.",
-            "Development of RESTful APIs, external integrations, and real-time communication.",
-            "Refactoring, bug fixing, and performance optimization."
+            "Built responsive interfaces and web/mobile systems.",
+            "Developed RESTful APIs, including real-time communication via WebSockets.",
+            "Integrated external ecosystems, including payment gateways and Meta's WhatsApp API.",
+            "Refactored code, fixed bugs, optimized performance, and developed custom solutions in WordPress."
           ],
           "technologies": [
             "React",
@@ -114,8 +115,10 @@
             "Node.js",
             "Express",
             "NestJS",
+            "Prisma",
             "PostgreSQL",
             "WebSockets",
+            "Tailwind CSS",
             "WordPress"
           ]
         },
@@ -126,21 +129,22 @@
           "startYear": 2025,
           "endMonth": 5,
           "endYear": 2026,
-          "summary": "Working on high-performance backend, cloud-native infrastructure, and observability.",
+          "summary": "High-availability backend engineering, cloud-native infrastructure, and observability.",
           "highlights": [
-            "Development of microservices in Go for loads exceeding 1000 ops/s.",
-            "GCP environment configuration focusing on scalability and security.",
-            "Implementation of observability dashboards and monitoring with Grafana, Prometheus, and PostgreSQL."
+            "Developed Go microservices handling loads exceeding 1000 ops/s.",
+            "Configured GCP environments with a focus on scalability and security.",
+            "Implemented monitoring and dashboards using Grafana and Prometheus, integrating PostgreSQL and GitHub Webhooks.",
+            "Administered and configured development and production clusters in MongoDB Atlas."
           ],
           "technologies": [
             "Go",
             "GCP",
             "Cloud Run",
             "Artifact Registry",
-            "Cloud Secrets",
             "Grafana",
             "Prometheus",
             "PostgreSQL",
+            "MongoDB",
             "MongoDB Atlas"
           ]
         },
@@ -151,11 +155,18 @@
           "startYear": 2025,
           "endMonth": 6,
           "endYear": 2025,
-          "summary": "Mobile app refactoring for delivery drivers.",
+          "summary": "Refactored and optimized the performance of the mobile app tailored for delivery driver operations.",
           "highlights": [
-            "Building high-fidelity mobile interfaces based on Figma with internationalization support."
+            "Built mobile interfaces with pixel-perfect fidelity to Figma designs.",
+            "Developed and maintained an internationalization (i18n) system for multi-language support."
           ],
-          "technologies": ["React Native", "TypeScript", "i18n", "Figma"]
+          "technologies": [
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "Figma",
+            "i18n"
+          ]
         },
         "pickngoFrontend": {
           "company": "PickNGo",
@@ -164,18 +175,20 @@
           "startYear": 2024,
           "endMonth": 6,
           "endYear": 2025,
-          "summary": "Modernization of the main logistics system.",
+          "summary": "Modernized and maintained the core logistics system, focusing on reliability and architectural flexibility.",
           "highlights": [
-            "Main system refactoring with Clean Code and TypeScript.",
-            "Implementation of whitelabel structure and complex flows."
+            "Refactored the core system applying Clean Code principles and strict typing with TypeScript.",
+            "Implemented real-time interactive maps, schedule management, and complex dynamic forms.",
+            "Structured global state management to ensure persistence and predictability in critical flows.",
+            "Developed and maintained a whitelabel architecture."
           ],
           "technologies": [
             "React",
             "TypeScript",
-            "i18n",
+            "Redux",
             "Figma",
             "Whitelabel",
-            "Maps"
+            "Mapbox"
           ]
         }
       }
