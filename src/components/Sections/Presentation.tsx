@@ -36,7 +36,7 @@ const Presentation = ({ className }: { className?: string }) => {
   const contactsList = [
     {
       label: "Email",
-      href: "mailto:otaviomendes.dev@gmail.com",
+      href: "mailto:dev.otavioms@gmail.com",
       icon: Mail,
     },
     {
