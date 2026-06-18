@@ -252,6 +252,7 @@
     },
     "projects": {
       "title": "Projetos",
+      "aboutProject": "Sobre o Projeto",
       "viewMore": "Ver mais",
       "loading": "Carregando projetos...",
       "noProjects": "Nenhum projeto encontrado",

@@ -19,8 +19,7 @@ import { useTranslation } from "react-i18next";
 import { applyOpacity } from "../../utils/utils";
 import { Project, ProjectStatus, ProjectType } from "../../Interfaces/Project";
 import BoxSection from "../common/BoxSection";
-import CustomModal from "../common/Modal";
-import Carousel from "../common/Carousel";
+import ProjectModal from "../common/ProjectModal";
 import CoffeeMachine from "../common/CoffeeMachine";
 import ProjectCard from "../common/ProjectCard";
 import FilterSelect from "../common/FilterSelect";
@@ -54,6 +53,13 @@ const Projects = ({ className }: { className?: string }) => {
           "socketio",
           "docker",
         ],
+        actions: [
+          {
+            type: "website",
+            label: "sections.projects.seeProject",
+            url: "https://clearkanban.com.br",
+          },
+        ],
       },
       {
         id: "clinicadobomsenso",
@@ -79,6 +85,13 @@ const Projects = ({ className }: { className?: string }) => {
           "postgresql",
           "docker",
         ],
+        actions: [
+          {
+            type: "website",
+            label: "sections.projects.seeProject",
+            url: "https://clinicadobomsenso.com.br/",
+          },
+        ],
       },
       {
         id: "baseclinica",
@@ -103,6 +116,13 @@ const Projects = ({ className }: { className?: string }) => {
           "postgresql",
           "docker",
         ],
+        actions: [
+          {
+            type: "website",
+            label: "sections.projects.seeProject",
+            url: "https://app.baseclinica.com.br/",
+          },
+        ],
       },
       {
         id: "hirely",
@@ -112,6 +132,18 @@ const Projects = ({ className }: { className?: string }) => {
         status: "planning",
         type: "personal",
         stacks: ["angular", "go"],
+        actions: [
+          {
+            type: "repository",
+            label: "Backend API",
+            url: "https://github.com/OtavioMendesSantos/hirely-api",
+          },
+          {
+            type: "repository",
+            label: "Frontend Web",
+            url: "https://github.com/OtavioMendesSantos/hirely-web",
+          },
+        ],
       },
     ],
     [t],
@@ -359,7 +391,9 @@ const Projects = ({ className }: { className?: string }) => {
               >
                 <ProjectCard
                   project={project}
-                  onOpenGallery={() => setSelectedProject(project)}
+                  onOpenGallery={() => {
+                    setSelectedProject(project);
+                  }}
                   getTypeName={getTypeName}
                   ProjectStatusIcon={ProjectStatusIcon}
                   renameStatus={renameStatus}
@@ -425,41 +459,15 @@ const Projects = ({ className }: { className?: string }) => {
         </Box>
       )}
 
-      <CustomModal
+      <ProjectModal
+        project={selectedProject}
         open={!!selectedProject}
         onClose={() => setSelectedProject(null)}
-        title={selectedProject?.name}
-        maxWidth="1000px"
-      >
-        {selectedProject ? (
-          <Carousel
-            items={selectedProject.images}
-            renderItem={(img) => (
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  src={img}
-                  alt={selectedProject.name}
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "70vh",
-                    objectFit: "contain",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            )}
-          />
-        ) : (
-          <></>
-        )}
-      </CustomModal>
+        getTypeName={getTypeName}
+        ProjectStatusIcon={ProjectStatusIcon}
+        renameStatus={renameStatus}
+        t={t}
+      />
     </BoxSection>
   );
 };

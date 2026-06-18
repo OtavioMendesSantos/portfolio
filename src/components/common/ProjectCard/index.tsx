@@ -82,9 +82,10 @@ const ProjectCard = ({
               py: 1,
               borderRadius: 1,
               fontSize: "0.9rem",
+              textTransform: "uppercase",
             }}
           >
-            VER GALERIA
+            Ver galeria
           </Typography>
         </Box>
       </Box>
@@ -150,40 +151,41 @@ const ProjectCard = ({
           ))}
         </Stack>
 
-        <Stack direction="row" spacing={1.5} sx={{ mt: "auto" }}>
-          {project.projectLink && (
-            <Button
-              href={project.projectLink}
-              target="_blank"
-              variant="contained"
-              size="small"
-              fullWidth
-              startIcon={<OpenInNewRoundedIcon />}
-              sx={{
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              {t("sections.projects.seeProject")}
-            </Button>
-          )}
-          {project.repositoryLink && (
-            <Button
-              href={project.repositoryLink}
-              target="_blank"
-              variant="outlined"
-              size="small"
-              fullWidth
-              startIcon={<CodeRoundedIcon />}
-              sx={{
-                borderRadius: "8px",
-                fontWeight: "bold",
-                textTransform: "none",
-              }}
-            >
-              {t("sections.projects.seeCode")}
-            </Button>
-          )}
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={1}
+          useFlexGap
+          sx={{ mt: "auto", width: "100%", flexWrap: "wrap", gap: 1 }}
+        >
+          {project.actions &&
+            project.actions.length > 0 &&
+            project.actions.map((action, idx) => (
+              <Button
+                key={idx}
+                href={action.url}
+                target="_blank"
+                variant={action.type === "website" ? "contained" : "outlined"}
+                size="small"
+                fullWidth
+                startIcon={
+                  action.type === "website" ? (
+                    <OpenInNewRoundedIcon />
+                  ) : (
+                    <CodeRoundedIcon />
+                  )
+                }
+                sx={{
+                  borderRadius: "8px",
+                  fontWeight: "bold",
+                  textTransform: "none",
+                  flex: project.actions.length > 2 ? "1 1 45%" : "1 1 0px",
+                }}
+              >
+                {action.label.startsWith("sections.")
+                  ? t(action.label)
+                  : action.label}
+              </Button>
+            ))}
         </Stack>
       </CardContent>
     </StyledProjectCard>

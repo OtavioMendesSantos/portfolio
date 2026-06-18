@@ -11,34 +11,7 @@ import BoxSection from "../common/BoxSection";
 import ImgWithLoading from "../common/ImgWithLoading";
 import { StyledTypography as Typography } from "../Styled/StyledComponents";
 
-interface Technology {
-  name: string;
-  icon: string;
-}
-
-const technologies: Technology[] = [
-  { name: "Go", icon: "go" },
-  { name: "React", icon: "react" },
-  { name: "TypeScript", icon: "typescript" },
-  { name: "JavaScript", icon: "javascript" },
-  { name: "Next.js", icon: "nextjs" },
-  { name: "Node.js", icon: "nodejs" },
-  { name: "Nest.js", icon: "nestjs" },
-  { name: "Express", icon: "express" },
-  { name: "Docker", icon: "docker" },
-  { name: "MongoDB", icon: "mongodb" },
-  { name: "PostgreSQL", icon: "postgresql" },
-  { name: "Socket.IO", icon: "socketio" },
-  { name: "Redux", icon: "redux" },
-  { name: "Material UI", icon: "materialui" },
-  { name: "SASS", icon: "sass" },
-  { name: "Tailwind", icon: "tailwindcss" },
-  { name: "Expo", icon: "expo" },
-  { name: "Git", icon: "git" },
-  { name: "Railway", icon: "railway" },
-  { name: "Grafana", icon: "grafana" },
-  { name: "Google Cloud Platform", icon: "googlecloud" },
-];
+import { technologies } from "../../constants/technologies";
 
 const TechnologiesCarousel = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
