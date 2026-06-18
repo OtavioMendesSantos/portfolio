@@ -255,6 +255,7 @@
       "viewMore": "View more",
       "loading": "Loading projects...",
       "noProjects": "No projects found",
+      "makingCoffee": "Wait, we're making some coffee...",
       "noDescription": "No description",
       "status": {
         "completed": "Completed",
@@ -266,10 +267,17 @@
       "filters": {
         "status": "Status",
         "technologies": "Technologies",
-        "select": "Select..."
+        "type": "Type",
+        "select": "Select...",
+        "clear": "Clear",
+        "clearAll": "Clear All"
+      },
+      "types": {
+        "pessoal": "Personal",
+        "profissional": "Professional"
       },
       "technologiesUsed": "Technologies Used",
-      "seeProject": "See project",
+      "seeProject": "Access System",
       "seeCode": "See code",
       "seeLess": "See less",
       "items": {

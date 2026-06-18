@@ -1,12 +1,14 @@
-type Status = 'nao_iniciado' | 'em_planejamento' | 'em_desenvolvimento' | 'concluido' | 'refatorando';
+export type ProjectStatus = 'not_started' | 'planning' | 'in_development' | 'completed' | 'refactoring';
+export type ProjectType = 'personal' | 'professional';
 
 export interface Project {
-    id: string,
+    id: string;
     name: string;
-    img?: string;
+    images: string[]; // Galeria de imagens, a primeira é a principal
     description: string;
-    linkRepositorio?: string;
-    linkProjeto?: string;
-    status: Status,
-    stacks: Array<string>;
+    repositoryLink?: string;
+    projectLink?: string;
+    status: ProjectStatus;
+    type: ProjectType;
+    stacks: string[];
 }

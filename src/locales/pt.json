@@ -255,6 +255,7 @@
       "viewMore": "Ver mais",
       "loading": "Carregando projetos...",
       "noProjects": "Nenhum projeto encontrado",
+      "makingCoffee": "Calma, estamos passando um café...",
       "noDescription": "Sem descrição",
       "visitRepository": "Visitar repositório",
       "status": {
@@ -267,10 +268,17 @@
       "filters": {
         "status": "Status",
         "technologies": "Tecnologias",
-        "select": "Selecione..."
+        "type": "Tipo",
+        "select": "Selecione...",
+        "clear": "Limpar",
+        "clearAll": "Limpar Tudo"
+      },
+      "types": {
+        "pessoal": "Pessoal",
+        "profissional": "Profissional"
       },
       "technologiesUsed": "Tecnologias Utilizadas",
-      "seeProject": "Veja o projeto",
+      "seeProject": "Acessar Sistema",
       "seeCode": "Veja o código",
       "seeLess": "Ver menos",
       "items": {
