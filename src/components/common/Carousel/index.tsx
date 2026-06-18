@@ -31,28 +31,47 @@ const Carousel = <T,>({
   const [autoClick, setAutoClick] = useState(true);
   const refAction = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const activeIndex = Math.abs(page % items.length);
+  const itemsLength = items?.length || 0;
 
-  const paginate = useCallback(
-    (newDirection: number) => {
-      setPage([page + newDirection, newDirection]);
-    },
-    [page],
-  );
+  const [prevItems, setPrevItems] = useState(items);
+  if (items !== prevItems) {
+    setPrevItems(items);
+    const itemsChanged = !((a, b) => {
+      if (a === b) return true;
+      if (!a || !b) return false;
+      if (a.length !== b.length) return false;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+      }
+      return true;
+    })(items, prevItems);
+
+    if (itemsChanged) {
+      setPage([0, 0]);
+      setAutoClick(true);
+    }
+  }
+
+  const activeIndex =
+    itemsLength > 0 ? ((page % itemsLength) + itemsLength) % itemsLength : 0;
+
+  const paginate = useCallback((newDirection: number) => {
+    setPage(([prevPage]) => [prevPage + newDirection, newDirection]);
+  }, []);
 
   const handleNext = useCallback(() => paginate(1), [paginate]);
   const handlePrev = useCallback(() => paginate(-1), [paginate]);
 
   useEffect(() => {
-    if (autoClick && items.length > 1) {
+    if (autoClick && itemsLength > 1) {
       refAction.current = setInterval(handleNext, autoPlaySpeed);
     }
     return () => {
       if (refAction.current) clearInterval(refAction.current);
     };
-  }, [autoClick, handleNext, items.length, autoPlaySpeed]);
+  }, [autoClick, handleNext, itemsLength, autoPlaySpeed]);
 
-  if (!items || items.length === 0) return null;
+  if (itemsLength === 0) return null;
 
   return (
     <Box sx={{ position: "relative", width: "100%", overflow: "hidden" }}>
@@ -135,7 +154,7 @@ const Carousel = <T,>({
             onClick={() => {
               const diff = index - activeIndex;
               if (diff !== 0) {
-                setPage([page + diff, diff > 0 ? 1 : -1]);
+                setPage(([prevPage]) => [prevPage + diff, diff > 0 ? 1 : -1]);
                 setAutoClick(false);
               }
             }}
