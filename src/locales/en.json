@@ -296,7 +296,7 @@
         },
         "hirely": {
           "name": "Hirely",
-          "description": "Management platform designed for recruitment and hiring companies."
+          "description": "Platform focused on the centralized management and traceability of job applications. Acting as a single source of truth, the system organizes the entire recruitment process through a Kanban interface."
         }
       }
     },

@@ -297,7 +297,7 @@
         },
         "hirely": {
           "name": "Hirely",
-          "description": "Plataforma de gestão projetada para empresas de recrutamento e contratação."
+          "description": "Plataforma focada na gestão centralizada e rastreabilidade de candidaturas a vagas de emprego. Atuando como fonte única de verdade, o sistema organiza todo o processo seletivo através de uma interface Kanban."
         }
       }
     },

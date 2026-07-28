@@ -127,11 +127,28 @@ const Projects = ({ className }: { className?: string }) => {
       {
         id: "hirely",
         name: t("sections.projects.items.hirely.name"),
-        images: ["/assets/images/no_image.png"],
+        images: [
+          "/assets/images/projects/hirely/hirely-home.png",
+          "/assets/images/projects/hirely/hirely-dashboard.png",
+          "/assets/images/projects/hirely/hirely-new-application.png",
+          "/assets/images/projects/hirely/hirely-application-details.png",
+          "/assets/images/projects/hirely/hirely-tags.png",
+          "/assets/images/projects/hirely/hirely-metrics.png",
+          "/assets/images/projects/hirely/hirely-login.png",
+          "/assets/images/projects/hirely/hirely-register.png",
+        ],
+
         description: t("sections.projects.items.hirely.description"),
-        status: "planning",
+        status: "completed",
         type: "personal",
-        stacks: ["angular", "go"],
+        stacks: [
+          "go",
+          "postgresql",
+          "typescript",
+          "angular",
+          "spartan",
+          "tailwind",
+        ],
         actions: [
           {
             type: "repository",
@@ -142,6 +159,11 @@ const Projects = ({ className }: { className?: string }) => {
             type: "repository",
             label: "Frontend Web",
             url: "https://github.com/OtavioMendesSantos/hirely-web",
+          },
+          {
+            type: "website",
+            label: "sections.projects.seeProject",
+            url: "https://web-hirely.vercel.app/",
           },
         ],
       },
