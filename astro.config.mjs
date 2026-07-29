@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   vite: {
-    resolve: {
+    ssr: {
       noExternal: [
         "@mui/material",
         "@mui/icons-material",
@@ -13,15 +13,7 @@ export default defineConfig({
         "@mui/utils",
         "@emotion/react",
         "@emotion/styled",
-        "react-transition-group",
       ],
-      alias: {
-        "react-transition-group/TransitionGroupContext":
-          "react-transition-group/esm/TransitionGroupContext.js",
-      },
-    },
-    optimizeDeps: {
-      exclude: ["react/jsx-dev-runtime", "react/jsx-runtime"],
     },
   },
 });

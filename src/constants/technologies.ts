@@ -5,6 +5,7 @@ export interface Technology {
 
 export const technologies: Technology[] = [
   { name: "Go", icon: "go" },
+  { name: "Go Gin", icon: "go-gin" },
   { name: "React", icon: "react" },
   { name: "TypeScript", icon: "typescript" },
   { name: "JavaScript", icon: "javascript" },

@@ -143,11 +143,12 @@ const Projects = ({ className }: { className?: string }) => {
         type: "personal",
         stacks: [
           "go",
+          "go-gin",
           "postgresql",
           "typescript",
           "angular",
           "spartan",
-          "tailwind",
+          "tailwindcss",
         ],
         actions: [
           {
