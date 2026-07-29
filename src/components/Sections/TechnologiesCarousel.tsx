@@ -1,17 +1,16 @@
 import { Box, Container, Tooltip, styled } from "@mui/material";
 import {
-  motion,
-  useAnimationFrame,
-  useMotionValue,
-  PanInfo,
+    PanInfo,
+    motion,
+    useAnimationFrame,
+    useMotionValue,
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { technologies } from "../../constants/technologies";
 import BoxSection from "../common/BoxSection";
 import ImgWithLoading from "../common/ImgWithLoading";
 import { StyledTypography as Typography } from "../Styled/StyledComponents";
-
-import { technologies } from "../../constants/technologies";
 
 const TechnologiesCarousel = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
@@ -65,7 +64,7 @@ const TechnologiesCarousel = ({ className }: { className?: string }) => {
 
   return (
     <BoxSection title={t("sections.technologies.title")} className={className}>
-      <Container sx={{ py: { xs: 3, md: 4 }, px: { xs: 0, sm: 3 } }}>
+      <Container sx={{ px: { xs: 0, sm: 3 }, pt: 5 }}>
         <CarouselViewport
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

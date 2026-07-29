@@ -326,5 +326,8 @@
   },
   "footer": {
     "developedBy": "Desenvolvido por"
+  },
+  "notFound": {
+    "backButton": "Navegar Para Home em {{seconds}}s"
   }
 }

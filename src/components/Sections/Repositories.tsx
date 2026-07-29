@@ -50,8 +50,8 @@ const Repositories = ({ className }: { className?: string }) => {
     }
 
     return (
-        <BoxSection title={t('sections.repositories.title')} className={className} sx={{ mb: 4 }}>
-            <Typography variant="h1" indicate>{t('sections.repositories.title')}</Typography>
+        <BoxSection title={t('sections.repositories.title')} className={className}>
+            <Typography variant="h1" indicate sx={{ mb: 6 }}>{t('sections.repositories.title')}</Typography>
             <Container
                 sx={{
                     display: 'flex',

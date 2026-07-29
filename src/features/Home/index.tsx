@@ -36,16 +36,17 @@ const Home = () => {
       >
         <Header position="sticky" />
         <Presentation />
+        <TechnologiesCarousel />
         <Container
           component="section"
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: { xs: 2, md: 4 },
+            gap: { xs: 10, md: 16 },
+            py: { xs: 8, md: 12 },
             minHeight: "100vh",
           }}
         >
-          <TechnologiesCarousel />
           <Skills className="homeSection" />
           <Experience className="homeSection" />
           <Training className="homeSection" />

@@ -31,7 +31,7 @@ const Contact = ({ className }: { className?: string }) => {
 
   return (
     <BoxSection title={t("sections.contact.title")} className={className}>
-      <StyledTypography variant="h1" indicate sx={{ mb: 4 }}>
+      <StyledTypography variant="h1" indicate sx={{ mb: 6 }}>
         {t("sections.contact.title")}
       </StyledTypography>
 
@@ -41,7 +41,6 @@ const Contact = ({ className }: { className?: string }) => {
           flexDirection: "column",
           alignItems: "flex-start",
           textAlign: "left",
-          my: { xs: 5, md: 20 },
         }}
       >
         <Stack

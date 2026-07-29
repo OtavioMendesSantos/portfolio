@@ -40,9 +40,9 @@ const Skills = ({ className }: { className?: string }) => {
 
   return (
     <BoxSection title={t('sections.skills.title')} className={className}>
-      <Typography indicate variant="h1">{t('sections.skills.title')}</Typography>
+      <Typography indicate variant="h1" sx={{ mb: 6 }}>{t('sections.skills.title')}</Typography>
 
-      <Container sx={{ py: 2, px: { xs: 0, sm: 3 } }}>
+      <Container sx={{ px: { xs: 0, sm: 3 } }}>
         <Box
           sx={{
             border: `1px solid ${theme.palette.divider}`,

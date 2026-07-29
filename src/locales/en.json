@@ -325,5 +325,8 @@
   },
   "footer": {
     "developedBy": "Developed by"
+  },
+  "notFound": {
+    "backButton": "Navigate to Home in {{seconds}}s"
   }
 }

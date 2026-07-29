@@ -289,7 +289,7 @@ const Projects = ({ className }: { className?: string }) => {
 
   return (
     <BoxSection title={t("sections.projects.title")} className={className}>
-      <Typography indicate variant="h1" sx={{ mb: 4 }}>
+      <Typography indicate variant="h1" sx={{ mb: 6 }}>
         {t("sections.projects.title")}
       </Typography>
 
