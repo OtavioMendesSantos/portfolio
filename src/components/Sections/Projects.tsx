@@ -130,10 +130,13 @@ const Projects = ({ className }: { className?: string }) => {
         images: [
           "/assets/images/projects/hirely/hirely-home.png",
           "/assets/images/projects/hirely/hirely-dashboard.png",
+          "/assets/images/projects/hirely/hirely-applications.png",
           "/assets/images/projects/hirely/hirely-new-application.png",
           "/assets/images/projects/hirely/hirely-application-details.png",
           "/assets/images/projects/hirely/hirely-tags.png",
           "/assets/images/projects/hirely/hirely-metrics.png",
+          "/assets/images/projects/hirely/hirely-archived.png",
+          "/assets/images/projects/hirely/hirely-api-keys.png",
           "/assets/images/projects/hirely/hirely-login.png",
           "/assets/images/projects/hirely/hirely-register.png",
         ],

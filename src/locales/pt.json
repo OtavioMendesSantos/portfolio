@@ -297,7 +297,7 @@
         },
         "hirely": {
           "name": "Hirely",
-          "description": "Plataforma focada na gestão centralizada e rastreabilidade de candidaturas a vagas de emprego. Atuando como fonte única de verdade, o sistema organiza todo o processo seletivo através de uma interface Kanban."
+          "description": "Plataforma para acompanhar candidaturas com quadro Kanban, tags, histórico de atividades, métricas e arquivamento. Inclui gestão de API Keys e um servidor MCP para integrar assistentes de IA ao gerenciamento das candidaturas."
         }
       }
     },

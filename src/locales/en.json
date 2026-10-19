@@ -296,7 +296,7 @@
         },
         "hirely": {
           "name": "Hirely",
-          "description": "Platform focused on the centralized management and traceability of job applications. Acting as a single source of truth, the system organizes the entire recruitment process through a Kanban interface."
+          "description": "Job application tracker with a Kanban board, tags, activity history, metrics and archiving. Includes API key management and an MCP server that connects AI assistants to application management."
         }
       }
     },
