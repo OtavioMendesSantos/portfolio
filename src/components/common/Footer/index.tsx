@@ -10,6 +10,8 @@ import {
 import { LinkedIn } from "@mui/icons-material";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -65,15 +67,8 @@ const Footer = () => {
           alignItems="center"
         >
           <Link
-            href="https://www.linkedin.com/in/otaviomendessantos/"
-            target="_blank"
-            rel="noreferrer noopen"
-            sx={iconLinkStyle}
-          >
-            <LinkedIn fontSize="small" />
-          </Link>
-          <Link
             href="mailto:dev.otavioms@gmail.com"
+            aria-label="Email"
             target="_blank"
             rel="noreferrer noopen"
             sx={iconLinkStyle}
@@ -82,11 +77,39 @@ const Footer = () => {
           </Link>
           <Link
             href="https://github.com/OtavioMendesSantos"
+            aria-label="GitHub"
             target="_blank"
             rel="noreferrer noopen"
             sx={iconLinkStyle}
           >
             <GitHubIcon fontSize="small" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/otaviomendessantos/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noreferrer noopen"
+            sx={iconLinkStyle}
+          >
+            <LinkedIn fontSize="small" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/dev_otavio/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noreferrer noopen"
+            sx={iconLinkStyle}
+          >
+            <InstagramIcon fontSize="small" />
+          </Link>
+          <Link
+            href="https://x.com/OtavioDev"
+            aria-label="X (Twitter)"
+            target="_blank"
+            rel="noreferrer noopen"
+            sx={iconLinkStyle}
+          >
+            <XIcon fontSize="small" />
           </Link>
         </Stack>
       </Container>
