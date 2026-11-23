@@ -38,6 +38,29 @@ const Projects = ({ className }: { className?: string }) => {
   const projects: Project[] = useMemo(
     () => [
       {
+        id: "transcritor",
+        name: t("sections.projects.items.transcritor.name"),
+        images: [
+          "/assets/images/projects/transcritor/inicio.png",
+          "/assets/images/projects/transcritor/biblioteca.png",
+          "/assets/images/projects/transcritor/busca.png",
+          "/assets/images/projects/transcritor/transcritor.webp",
+          "/assets/images/projects/transcritor/transcricao.png",
+          "/assets/images/projects/transcritor/visao-geral.png",
+        ],
+        description: t("sections.projects.items.transcritor.description"),
+        status: "in_development",
+        type: "personal",
+        stacks: ["Rust", "Tauri", "react", "typescript", "tailwindcss", "SQLite"],
+        actions: [
+          {
+            type: "website",
+            label: "sections.projects.viewDownload",
+            url: "https://otaviomendessantos.github.io/transcritor-releases/",
+          },
+        ],
+      },
+      {
         id: "clearkanban",
         name: t("sections.projects.items.clearKanban.name"),
         images: ["/assets/images/projects/clear-kanban/clear-kanban-1.png"],

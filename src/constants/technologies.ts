@@ -4,6 +4,9 @@ export interface Technology {
 }
 
 export const technologies: Technology[] = [
+  { name: "Rust", icon: "rust" },
+  { name: "Tauri", icon: "tauri" },
+  { name: "SQLite", icon: "sqlite" },
   { name: "Go", icon: "go" },
   { name: "Go Gin", icon: "go-gin" },
   { name: "React", icon: "react" },

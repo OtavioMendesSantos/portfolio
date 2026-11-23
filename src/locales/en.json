@@ -279,9 +279,14 @@
       },
       "technologiesUsed": "Technologies Used",
       "seeProject": "Access System",
+      "viewDownload": "Explore and download",
       "seeCode": "See code",
       "seeLess": "See less",
       "items": {
+        "transcritor": {
+          "name": "Transcritor",
+          "description": "App for transcribing and organizing meeting recordings on Linux. Supports searching for what was said and jumping to the matching moment in the video, with audio and transcripts kept on the user's computer. Includes text and subtitle export and integration with AI assistants to look up meeting content."
+        },
         "clearKanban": {
           "name": "Clear Kanban",
           "description": "Demand management SaaS based on the Kanban methodology. Focused on collaboration, it integrates real-time communication via WebSockets for instant updates and secure authentication flows, ensuring a seamless experience."

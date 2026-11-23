@@ -280,9 +280,14 @@
       },
       "technologiesUsed": "Tecnologias Utilizadas",
       "seeProject": "Acessar Sistema",
+      "viewDownload": "Conhecer e baixar",
       "seeCode": "Veja o código",
       "seeLess": "Ver menos",
       "items": {
+        "transcritor": {
+          "name": "Transcritor",
+          "description": "Aplicativo para transcrever e organizar gravações de reuniões no Linux. Permite buscar o que foi dito e acessar o trecho correspondente no vídeo, com áudio e transcrições mantidos no próprio computador. Inclui exportação de textos e legendas e integração com assistentes de IA para consultar as reuniões."
+        },
         "clearKanban": {
           "name": "Clear Kanban",
           "description": "SaaS de gestão de demandas baseado na metodologia Kanban. Focado em colaboração, integra comunicação em tempo real via WebSockets para atualizações instantâneas e fluxos seguros de autenticação, garantindo uma experiência fluida."
