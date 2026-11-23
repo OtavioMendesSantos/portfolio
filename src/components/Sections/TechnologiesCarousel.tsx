@@ -87,6 +87,8 @@ const TechnologiesCarousel = ({ className }: { className?: string }) => {
                       src={`/assets/svgs/${technology.icon}-original.svg`}
                       alt={`${technology.name} logo`}
                       imgProps={{
+                        width: 48,
+                        height: 48,
                         style: {
                           width: "48px",
                           height: "48px",

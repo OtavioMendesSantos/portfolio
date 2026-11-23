@@ -3,7 +3,12 @@
     "name": "Otávio Mendes Santos",
     "kicker": "Engenharia de software e arquitetura cloud-native",
     "developerLabel": "Desenvolvedor",
-    "typingWords": ["Full Stack", "Back-end", "Front-end", "Mobile"],
+    "typingWords": [
+      "Full Stack",
+      "Back-end",
+      "Front-end",
+      "Mobile"
+    ],
     "job": "Desenvolvedor Full Stack",
     "description": "Desenvolvimento de software com foco em backend e alta performance. Experiência prática na criação de APIs resilientes, modelagem de dados, práticas de DevOps e desenvolvimento de interfaces modernas.",
     "dominateTechnologies": "Tecnologias que domino",
@@ -216,25 +221,9 @@
       "coursesAndCertificates": "Cursos e Certificados",
       "certificates": {
         "items": {
-          "react": {
-            "title": "React",
-            "description": "Curso intensivo sobre React, abrangendo desde a sintaxe básica até conceitos avançados como Hooks e Context API. Inclui um projeto final de conclusão onde desenvolvemos um aplicativo completo (Dogs)."
-          },
-          "javascript": {
-            "title": "JavaScript",
-            "description": "Formação completa em JavaScript, cobrindo desde os fundamentos até técnicas avançadas. O curso inclui o uso de classes, objetos, web APIs, padrões de projeto e a manipulação do DOM."
-          },
-          "typescript": {
-            "title": "TypeScript",
-            "description": "Curso intensivo sobre TypeScript, abrangendo desde a sintaxe básica até conceitos avançados como Interfaces e Tipagem de Dados."
-          },
-          "reactWithTypeScript": {
-            "title": "React com TypeScript",
-            "description": "Curso intensivo sobre React com TypeScript, abrangendo desde a sintaxe básica até conceitos avançados como Hooks e Context API."
-          },
-          "flexbox": {
-            "title": "FlexBox",
-            "description": "Curso focado em CSS Flexbox, abordando propriedades como flex, flexShrink, e flexGrow para criar layouts responsivos e flexíveis."
+          "fullStack": {
+            "title": "Formação Full Stack",
+            "description": "Formação de 242 horas que reúne sete cursos: HTML e CSS para Iniciantes, CSS Flexbox, JavaScript Completo ES6, React Completo, TypeScript para Iniciantes, React com TypeScript e Back End Node.js."
           },
           "gameDevJs": {
             "title": "Desenvolvimento de Jogos com JavaScript",
@@ -244,7 +233,8 @@
             "title": "Desenvolvimento Back End com Kotlin",
             "description": "Introdução ao desenvolvimento back end utilizando Kotlin, cobrindo fundamentos da linguagem e a criação de APIs e serviços."
           }
-        }
+        },
+        "viewPdf": "Ver certificado completo (PDF)"
       },
       "certificateModal": {
         "title": "Certificado"

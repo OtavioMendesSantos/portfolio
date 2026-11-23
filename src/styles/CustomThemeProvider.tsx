@@ -60,34 +60,34 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
         typography: {
             fontFamily: ['"Poppins"', 'sans-serif'].join(','),
             h1: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '2rem',
-                fontWeight: 700
+                fontWeight: 800
             },
             h2: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '1.5rem',
-                fontWeight: 700
+                fontWeight: 800
             },
             h3: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '1.25rem',
-                fontWeight: 700
+                fontWeight: 800
             },
             h4: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '1rem',
-                fontWeight: 700
+                fontWeight: 600
             },
             h5: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '0.875rem',
-                fontWeight: 700
+                fontWeight: 600
             },
             h6: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '0.75rem',
-                fontWeight: 700
+                fontWeight: 600
             },
             body1: {
                 fontFamily: '"Poppins", sans-serif',
@@ -100,15 +100,15 @@ const createCustomTheme = (mode: 'light' | 'dark') => {
                 fontWeight: 400
             },
             subtitle1: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '1rem',
-                fontWeight: 700,
+                fontWeight: 600,
                 display: 'inline'
             },
             subtitle2: {
-                fontFamily: '"Druk Wide", sans-serif',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '0.875rem',
-                fontWeight: 700,
+                fontWeight: 600,
                 display: 'inline'
             },
             button: {

@@ -77,7 +77,7 @@ const Presentation = ({ className }: { className?: string }) => {
         }}
       >
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           style={{ width: "100%" }}
@@ -211,7 +211,12 @@ const Presentation = ({ className }: { className?: string }) => {
               >
                 <Box
                   component="img"
-                  src="/assets/images/profile.png"
+                  src="/assets/images/profile.webp"
+                  width={840}
+                  height={840}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   alt={t("presentation.name")}
                   onDragStart={(event: React.DragEvent<HTMLImageElement>) =>
                     event.preventDefault()

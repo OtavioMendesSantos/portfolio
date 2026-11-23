@@ -1,6 +1,7 @@
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import {
   Box,
+  Button,
   CardContent,
   Container,
   Divider,
@@ -32,6 +33,7 @@ interface Certificate {
   hours: number;
   organization: string;
   src: string;
+  pdf?: string;
   description: string;
 }
 
@@ -176,50 +178,13 @@ const Training = ({ className }: { className?: string }) => {
   const certificates: Certificate[] = useMemo(
     () => [
       {
-        name: t("sections.training.certificates.items.react.title"),
+        name: t("sections.training.certificates.items.fullStack.title"),
         organization: "Origamid",
-        src: "/assets/images/certificates/react-origamid.png",
-        hours: 36,
+        src: "/assets/images/certificates/fullstack-origamid.webp",
+        pdf: "/assets/documents/certificates/fullstack-origamid.pdf",
+        hours: 242,
         description: t(
-          "sections.training.certificates.items.react.description",
-        ),
-      },
-      {
-        name: t("sections.training.certificates.items.javascript.title"),
-        organization: "Origamid",
-        src: "/assets/images/certificates/javascript-origamid.jpg",
-        hours: 74,
-        description: t(
-          "sections.training.certificates.items.javascript.description",
-        ),
-      },
-      {
-        name: t("sections.training.certificates.items.typescript.title"),
-        organization: "Origamid",
-        src: "/assets/images/certificates/typescript-origamid.jpg",
-        hours: 22,
-        description: t(
-          "sections.training.certificates.items.typescript.description",
-        ),
-      },
-      {
-        name: t(
-          "sections.training.certificates.items.reactWithTypeScript.title",
-        ),
-        organization: "Origamid",
-        src: "/assets/images/certificates/react_typescript-origamid.jpg",
-        hours: 10,
-        description: t(
-          "sections.training.certificates.items.reactWithTypeScript.description",
-        ),
-      },
-      {
-        name: t("sections.training.certificates.items.flexbox.title"),
-        organization: "Origamid",
-        src: "/assets/images/certificates/flexbox-origamid.jpg",
-        hours: 6,
-        description: t(
-          "sections.training.certificates.items.flexbox.description",
+          "sections.training.certificates.items.fullStack.description",
         ),
       },
       {
@@ -289,6 +254,10 @@ const Training = ({ className }: { className?: string }) => {
               sx: { cursor: "pointer", width: "100%", aspectRatio: "16/11" },
             }}
             imgProps={{
+              loading: "lazy",
+              width: 1600,
+              height: 1100,
+              fetchPriority: "low",
               onClick: () => handleImageClick(item.src, item.name),
             }}
           />
@@ -319,6 +288,17 @@ const Training = ({ className }: { className?: string }) => {
           <Typography variant="body1" sx={{ lineHeight: 1.7, opacity: 0.8 }}>
             {item.description}
           </Typography>
+          {item.pdf && (
+            <Button
+              href={item.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outlined"
+              sx={{ alignSelf: { xs: "center", md: "flex-start" } }}
+            >
+              {t("sections.training.certificates.viewPdf")}
+            </Button>
+          )}
         </Stack>
       </Grid>
     </Grid>

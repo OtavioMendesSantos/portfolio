@@ -74,6 +74,7 @@ const ProjectModal = ({
                 <motion.img
                   key={activeImageIndex}
                   src={project.images[activeImageIndex]}
+                  decoding="async"
                   alt={project.name}
                   initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -133,6 +134,9 @@ const ProjectModal = ({
                   >
                     <img
                       src={img}
+                      loading="lazy"
+                      fetchPriority="low"
+                      decoding="async"
                       alt={`${project.name} thumb ${idx}`}
                       style={{
                         width: "100%",

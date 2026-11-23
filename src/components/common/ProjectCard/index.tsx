@@ -48,6 +48,10 @@ const ProjectCard = ({
           src={project.images[0]}
           alt={project.name}
           imgProps={{
+            loading: "lazy",
+            width: 640,
+            height: 360,
+            fetchPriority: "low",
             style: {
               width: "100%",
               height: "100%",

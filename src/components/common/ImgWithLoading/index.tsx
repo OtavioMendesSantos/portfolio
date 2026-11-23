@@ -37,6 +37,9 @@ const ImgWithLoading = ({ src, alt, boxProps, imgProps, href }: ImageProps) => {
 
     const image = (
         <img
+            loading="eager"
+            fetchPriority="low"
+            decoding="async"
             {...imgProps}
             ref={imgRef}
             src={src}
@@ -49,7 +52,7 @@ const ImgWithLoading = ({ src, alt, boxProps, imgProps, href }: ImageProps) => {
                 objectFit: 'cover',
                 objectPosition: 'center',
                 transition: 'all 0.3s ease-in-out',
-                display: loading ? 'none' : 'block',
+                display: 'block',
                 ...imgProps?.style
             }}
         />
@@ -59,6 +62,7 @@ const ImgWithLoading = ({ src, alt, boxProps, imgProps, href }: ImageProps) => {
         <Box
             {...boxProps}
             sx={{
+                position: 'relative',
                 maxWidth: '100%',
                 maxHeight: '100%',
                 width: '100%',
@@ -69,7 +73,7 @@ const ImgWithLoading = ({ src, alt, boxProps, imgProps, href }: ImageProps) => {
                 ...boxProps?.sx
             }}
         >
-            {loading && <CircularProgress color="primary" />}
+            {loading && <CircularProgress color="primary" sx={{ position: 'absolute' }} />}
             {href ? (
                 <a
                     href={href}
